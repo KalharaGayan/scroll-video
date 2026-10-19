@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  FINISH PERFORMANCE HEALTH — BRAND SYSTEM, RELEASE 1
+  Frozen 6 September 2026 · Athens, Georgia
+  FINISH Longevity landing v3.1 — Pillar Three page
+
+  DOCTRINE OF RECORD: FINISH_MasterBrand_BrandBook_v3.0.html
+  Where a page and the book disagree, one of them is wrong and somebody names
+  which within the week. A published page outranks the book on price. The book
+  outranks any page on naming, claims, and what a pillar may say about itself.
+
+  THE RELEASE FAMILY — versioned together. Change one, check the rest.
+      FINISH_MasterBrand_BrandBook_v3.0.html      parent doctrine
+      FINISH_MasterBrand_Web_v2.3.html            parent story & entry point
+      FINISH_MasterBrand_About_v8.5.html          the people (authoritative)
+      FINISH_DirectOrthoPlus_BrandBook_V4.4.4     Pillar One standard
+      DirectOrtho-landing_v10.2.html              Pillar One conversion
+      FINISH_Healthspan_Landing_v6.1.html         Pillar Two conversion & prices
+      FINISH_Longevity_Landing_v3.1.html          Pillar Three page
+
+  SETTLED IN THIS RELEASE — not to be reopened inside a single file.
+      Type ........ Playfair Display over DM Sans is the web system of record,
+                    and the serif-over-sans inversion is deliberate. Gotham and
+                    Sherborne are print and identity only. Montserrat and
+                    Spectral are withdrawn.
+      Names ....... DirectOrtho+, FINISH Healthspan, FINISH Longevity are the
+                    names. The lines beneath them are descriptors and are never
+                    used as the name, including in a title tag or an h1.
+      Marks ....... The gold horizontal lockup sits on every ground unchanged,
+                    pillar grounds included. Brand Book p.21.
+      Pillar II ... Prices are published. The FINISH Healthspan page is the
+                    public source of record; the book carries headlines only.
+      Pillar III .. In development. No service, price or clinical claim, and no
+                    membership may present it as an included benefit.
+      Membership .. Two products: DirectOrtho+ Membership (Pillar One, stands
+                    alone) and FINISH Healthspan Membership (Bronze, Silver,
+                    Gold — contains Pillar One access). Neither is ever called
+                    "the FINISH membership" in published copy.
+      Recovery .... The room is the Recovery Zone on every surface.
+  ----------------------------------------------------------------------------
+  FROZEN. This file is content- and doctrine-complete at Release 1. Nothing in
+  it may be edited in isolation. Any change to a statement of naming, price,
+  pillar status, membership, mark or type is a change to the release: all seven
+  files move together, and the next state is Release 2.
+
+  PERMITTED WITHOUT REOPENING THE RELEASE — none of these change what the
+  system says, only what it points at:
+      · replacing PLACEHOLDER_ tokens with live URLs
+      · adding photography and the 1200x630 social card
+      · filling named people, credentials and photographs on the team page
+      · stripping these deployment comments before publication
+
+  KNOWN OPEN AT FREEZE — carried deliberately, not overlooked:
+      · FINISH_Membership_Tiers.docx and the v28 membership model still carry
+        the superseded Gold outcome guarantee, "testing on request" and
+        supplement language. They become contractual the moment a member signs
+        one, and a contract beats a price list. Reconcile before either goes
+        operational.
+      · Clinical-team credentials on the About page are placeholders pending
+        verification of actual licensure. The women's health role is a
+        physician role and its name must reach the disclosure block.
+      · DirectOrtho-landing_v10.2.html carries one unclosed div element, inherited
+        from v10 and left rather than guessed at. Browsers recover; a validator
+        will not.
+      · Founding pricing runs six months. At transition, visible copy, FAQ
+        worked examples and JSON-LD schema move in one pass or not at all.
+  ----------------------------------------------------------------------------
+
+  THIS PILLAR IS NOT OPEN. There are deliberately no prices, no treatment
+  packages, no booking control and no "consultation" CTA anywhere on this page.
+  The only conversion is the interest list. Do not add any of the above until
+  all four gates on this page are actually met — the page publishes the
+  standard, so failing it in public would cost more than the pillar earns.
+
+  COMPOSITION, v3. Two sections were rebuilt because their form contradicted
+  their content. The six-domain card grid became a longitudinal field: the copy
+  said "not a service menu" while six equal boxes said otherwise, and equal
+  boxes also implied a proprietary six-domain instrument that does not exist.
+  The lanes are an editorial metaphor — no axis values, no data claim — and the
+  caption says so twice. "What the record makes possible" became the page's
+  largest visual, because the moat is not that FINISH tests more; it is that a
+  history becomes clinically useful if somebody keeps it. The record shown is an
+  ILLUSTRATIVE COMPOSITE and is labelled as such on screen; it must never be
+  replaced with a real patient's timeline, even anonymised.
+
+  COLOUR. Pillar Three's ground is deep forest #1C3B33, the value already
+  documented in the master brand book. An earlier draft used a plum #241D23;
+  it measured 1.10:1 against the parent charcoal and 1.06:1 against the
+  DirectOrtho+ navy, meaning the three pillars read as one dark rather than
+  three grounds. Forest measures 1.23 and 1.43 against the same two.
+  Three values, because one cannot do every job:
+      --g   #1C3B33  the ground
+      --gd  #142A25  nav bar and deepest fields
+      --acc #356E5E  the working accent, legible AS green at small sizes
+                     (5.93:1 on white, 5.25:1 on cream)
+  Gold on the forest ground measures 4.02:1, which clears AA Large but NOT
+  AA normal — so use gold-lift #C4A93F (5.28:1) for any small gold text here.
+
+  BEFORE THIS GOES LIVE:
+
+  1. REPLACE EVERY PLACEHOLDER. Search "PLACEHOLDER_". Unresolved links are
+     made inert by the script at the bottom of the body, and the interest form
+     tells the person to email instead rather than posting into nothing.
+         PLACEHOLDER_LONGEVITY_URL       this page
+         PLACEHOLDER_FINISH_HOME_URL     parent landing page
+         PLACEHOLDER_DIRECTORTHO_URL     Pillar One
+         PLACEHOLDER_HEALTHSPAN_URL      Pillar Two
+         PLACEHOLDER_FINISH_ABOUT_URL    About & Our Team
+         PLACEHOLDER_INTEREST_FORM_URL   interest-list endpoint
+         PLACEHOLDER_INTEREST_EMAIL      manual fallback address
+         PLACEHOLDER_OG_IMAGE_URL        1200x630 social card
+
+  2. THE INTEREST LIST IS NOT A PATIENT LIST. It collects a name, an email and
+     an optional phone number for launch updates only. Do not add medical
+     questions to it, and do not import it into the EMR. The form says so on
+     screen; keep that true.
+
+  3. ADD A PORTRAIT for Dr. Gaunder in the pillar-direction section, or leave
+     the panel as it is. Do not substitute stock photography here.
+
+  4. STRIP THESE DEPLOYMENT COMMENTS last.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINISH Longevity | Longevity & Wellness · Athens, GA</title>
+<meta name="description" content="FINISH Longevity is being designed for the long arc of health — movement, bone, metabolic health, sleep, cognition and evidence-based regenerative strategy watched across decades, not visits. Pillar Three of FINISH Performance Health. In development.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="canonical" href="PLACEHOLDER_LONGEVITY_URL">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#1C3B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FINISH Performance Health">
+<meta property="og:title" content="FINISH Longevity · Longevity &amp; Wellness · Athens, GA">
+<meta property="og:description" content="Designed for the long arc of health, and currently in development. Pillar Three of FINISH Performance Health.">
+<meta property="og:url" content="PLACEHOLDER_LONGEVITY_URL">
+<meta property="og:image" content="PLACEHOLDER_OG_IMAGE_URL">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FINISH Longevity · Athens, GA">
+<meta name="twitter:description" content="Designed for the long arc of health. In development.">
+<meta name="twitter:image" content="PLACEHOLDER_OG_IMAGE_URL">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231C3B33'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='19' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "FINISH Longevity — Longevity and Wellness",
+  "url": "PLACEHOLDER_LONGEVITY_URL",
+  "description": "Pillar Three of FINISH Performance Health. Designed for the long arc of health and currently in development. Not accepting patients; no services, pricing or clinical outcomes are offered.",
+  "isPartOf": {
+    "@type": "MedicalOrganization",
+    "name": "FINISH Performance Health",
+    "url": "PLACEHOLDER_FINISH_HOME_URL",
+    "telephone": "+1-706-224-9951",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "394 S. Milledge Avenue, Suites 101 & 102",
+      "addressLocality": "Athens", "addressRegion": "GA",
+      "postalCode": "30605", "addressCountry": "US"
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#1C3B33;--g2:#25493F;--gd:#142A25;--acc:#356E5E;--gold:#AD9227;--gl:#C4A93F;--cream:#F4F1EA;--paper:#FBF9F5;--ink:#272727;--soft:#57514B;--line:rgba(28,59,51,.14);--ld:rgba(196,169,63,.26);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 56px));margin:auto}.dark{color:var(--cream)}.ey{font-size:10px;letter-spacing:.27em;text-transform:uppercase;font-weight:600;color:#7E6B1E}.dark .ey{color:var(--gl)}h1,h2,h3{font-family:var(--serif);font-weight:400}h2{font-size:clamp(38px,5vw,62px);line-height:1.05;letter-spacing:-.02em}.lead{font-size:18px;line-height:1.75;color:var(--soft);max-width:62ch}.dark .lead{color:rgba(244,241,234,.72)}.rule{width:50px;height:2px;background:var(--gold);margin:18px 0 22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid transparent;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.gold{background:var(--gold);color:var(--gd)}.ghost{border-color:rgba(244,241,234,.35);color:var(--cream)}.darkbtn{border-color:var(--g);color:var(--g)}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--gold);color:var(--gd);padding:14px 22px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.skip:focus{left:0}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gl);outline-offset:3px}.nav{position:sticky;top:0;z-index:50;background:rgba(20,42,37,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;gap:14px;align-items:center;color:var(--cream)}.brand-mark{display:inline-flex;flex-direction:column;gap:5px;line-height:1}.brand-mark .fi-logo{height:22px;color:var(--cream)}.brand-desc{font-size:7.6px;font-weight:400;letter-spacing:.34em;text-indent:.34em;text-transform:uppercase;color:var(--gl);white-space:nowrap;text-align:right;align-self:stretch}.fi-logo{height:20px;width:auto;aspect-ratio:3.4233;flex:none;display:block;color:#FFFFFF}.brand .sep{width:1px;height:26px;background:rgba(244,241,234,.25);flex:none}.brand b{font-size:20px;letter-spacing:.08em}.brand b i{color:var(--gl);font-style:normal}.brand small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.5)}.links{display:flex;align-items:center;gap:24px}.links>a:not(.btn){font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(244,241,234,.68)}
+.hero{background:var(--g);min-height:760px;position:relative;overflow:hidden;display:flex;align-items:center}.hero:before{content:'';position:absolute;right:-220px;top:-160px;width:720px;height:720px;border:1px solid rgba(196,169,63,.15);border-radius:50%}.heroin{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;padding:100px 0}.status{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(196,169,63,.3);padding:8px 12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gl);margin-bottom:28px}.dot{width:6px;height:6px;border-radius:50%;background:var(--gl)}h1{font-size:clamp(56px,7vw,92px);line-height:.97;letter-spacing:-.035em;max-width:10.5ch}h1 em{color:var(--gl)}.hero p.copy{font-size:19px;font-weight:300;line-height:1.72;color:rgba(244,241,234,.72);max-width:58ch;margin-top:28px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.note{font-size:11px;color:rgba(244,241,234,.42);margin-top:15px}.arc{position:relative;min-height:480px;display:grid;place-items:center}.orb{position:absolute;border:1px solid rgba(196,169,63,.22);border-radius:50%}.o1{width:430px;height:430px}.o2{width:330px;height:330px}.o3{width:225px;height:225px}.core{text-align:center;z-index:2;width:190px}.core strong{display:block;font-family:var(--serif);font-size:68px}.core span{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gl)}.core p{font-size:12px;color:rgba(244,241,234,.5);margin-top:14px}
+.sec{padding:105px 0}.thesis{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px}.thesis .left{font-family:var(--serif);font-size:29px;line-height:1.35}.quote{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.45;border-left:2px solid var(--gold);padding-left:18px;margin-top:28px}.domains{background:var(--g)}.top2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}.grid6{display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;border-top:1px solid var(--ld);border-left:1px solid var(--ld)}.card{padding:30px 28px;border-right:1px solid var(--ld);border-bottom:1px solid var(--ld);min-height:185px}.card .n{font-size:10px;color:var(--gl);letter-spacing:.16em}.card h3{font-size:23px;margin:14px 0 8px}.card p{font-size:13px;color:rgba(244,241,234,.58)}
+.method{background:var(--cream)}.steps{margin-top:50px;border-top:1px solid var(--line)}.step{display:grid;grid-template-columns:90px .72fr 1.28fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}.step .num{font-family:var(--serif);font-size:36px;color:#7E6B1E}.step h3{font-size:25px}.step p{font-size:14px;color:var(--soft)}.diff{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:50px}.box{padding:38px;border:1px solid var(--line);background:#fff}.box.darkbox{background:var(--g);color:var(--cream);border-color:var(--g)}.box h3{font-size:31px;line-height:1.18;margin:14px 0}.box p{font-size:14px;color:var(--soft)}.darkbox p{color:rgba(244,241,234,.66)}.box ul{margin-top:18px;display:grid;gap:9px}.box li{list-style:none;font-size:13px;color:var(--soft);padding-left:16px;position:relative}.darkbox li{color:rgba(244,241,234,.66)}.box li:before{content:'—';position:absolute;left:0;color:var(--gold)}
+.cont{background:var(--gd)}.contgrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:75px;align-items:center}.record{border:1px solid rgba(255,255,255,.1)}.rr{display:grid;grid-template-columns:105px 1fr;gap:20px;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.08)}.rr:last-child{border-bottom:0}.rk{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--gl)}.rv{font-size:14px;color:rgba(244,241,234,.7)}.rv b{color:var(--cream)}
+.standard{background:var(--cream)}.stdgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.gate{padding:22px 0;border-bottom:1px solid var(--line)}.gate:first-child{border-top:1px solid var(--line)}.gate small{color:#7E6B1E;letter-spacing:.16em;text-transform:uppercase}.gate h3{font-family:var(--sans);font-size:15px;font-weight:700;margin-top:7px}.gate p{font-size:13px;color:var(--soft);margin-top:4px}
+.director{background:var(--paper)}.dir{display:grid;grid-template-columns:230px 1fr;gap:45px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:42px 0;align-items:center}.ph{height:265px;background:linear-gradient(145deg,var(--g2),var(--g));position:relative}.ph:after{content:'PHOTOGRAPH';position:absolute;left:18px;bottom:15px;font-size:8px;letter-spacing:.2em;color:rgba(244,241,234,.4)}.dir h3{font-size:38px;margin:9px 0}.dir p{font-size:14px;color:var(--soft);max-width:68ch}.scope{font-size:11px!important;margin-top:14px;color:#746c65!important}
+.interest{background:var(--g)}.interestgrid{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}.form{padding:32px;border:1px solid rgba(255,255,255,.12)}.form label{display:block;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gl);margin:16px 0 7px}.form label:first-child{margin-top:0}.form input{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.22);padding:10px 0;color:var(--cream)}.form .btn{width:100%;margin-top:24px}.formstatus{margin-top:14px;font-size:13px;line-height:1.6;color:var(--gl)}
+.formstatus[data-state="err"]{color:#E8A87C}
+.formnote{font-size:10px;color:rgba(244,241,234,.42);margin-top:11px}.eco{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.ec{padding:26px;border:1px solid var(--line);background:#fff}.ec.current{background:var(--g);color:var(--cream);border-color:var(--g)}.ec h3{font-size:24px;margin:9px 0}.ec p{font-size:12px;color:var(--soft)}.current p{color:rgba(244,241,234,.6)}.badge{display:inline-block;margin-top:18px;padding:6px 9px;border:1px solid var(--line);font-size:8px;letter-spacing:.15em;text-transform:uppercase}.current .badge{border-color:rgba(196,169,63,.32);color:var(--gl)}
+footer{background:#141114;color:rgba(244,241,234,.45);padding:44px 0 90px}.ft{display:flex;justify-content:space-between;gap:25px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:22px}.fine{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:20px;font-size:10px}.verse{font-family:var(--serif);font-style:italic;margin-top:26px}.mobile{display:none}
+@media(max-width:900px){.links>a:not(.btn){display:none}.heroin,.thesis,.top2,.contgrid,.stdgrid,.interestgrid{grid-template-columns:1fr}.grid6{grid-template-columns:1fr 1fr}.diff{grid-template-columns:1fr}.step{grid-template-columns:60px 1fr}.step p{grid-column:2}.eco{grid-template-columns:1fr}}@media(max-width:650px){.wrap{width:calc(100% - 34px)}@media(max-width:900px){.brand small,.brand .sep{display:none}}.hero{min-height:auto}.heroin{padding:78px 0}.arc{min-height:320px}.o1{width:290px;height:290px}.o2{width:220px;height:220px}.o3{width:150px;height:150px}.grid6{grid-template-columns:1fr}.dir{grid-template-columns:1fr}.ph{height:360px}.ft,.fine{display:grid;grid-template-columns:1fr}.mobile{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60}.mobile a{padding:14px;text-align:center;font-size:11px;font-weight:700;text-transform:uppercase}.mobile a:first-child{background:var(--gd);color:var(--cream)}.mobile a:last-child{background:var(--gold);color:var(--gd)}}
+
+/* ── LONGITUDINAL FIELD ──────────────────────────────────────
+   Replaces the six-card grid. The paragraph said these are not a service
+   menu; six equal boxes said otherwise. Lanes running across a lifespan say
+   what the copy says. Editorial metaphor only — no axis values, no data
+   claim, and deliberately not a proprietary six-domain instrument. */
+.field{margin-top:44px}
+.field-scale{display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:center;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.42);margin-bottom:14px}
+.field-ticks{display:flex;justify-content:space-between}
+.lane{display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:center;
+  padding:13px 0;border-top:1px solid rgba(244,241,234,.10)}
+.lane:last-child{border-bottom:1px solid rgba(244,241,234,.10)}
+.lane-n{display:flex;flex-direction:column;gap:3px}
+.lane-n b{font-family:var(--serif);font-weight:400;font-size:17px;color:var(--cream);line-height:1.2}
+.lane-n span{font-size:11.5px;line-height:1.5;color:rgba(244,241,234,.55)}
+.lane-t{position:relative;height:26px}
+.bar{position:absolute;top:7px;height:12px;border-radius:6px;
+  background:linear-gradient(90deg,rgba(53,110,94,0),rgba(53,110,94,.28) 18%,rgba(53,110,94,.80))}
+.bar.full{background:linear-gradient(90deg,rgba(196,169,63,.26),rgba(196,169,63,.68))}
+.bar.mod{background:linear-gradient(90deg,rgba(53,110,94,.18),rgba(53,110,94,.52),rgba(53,110,94,.18))}
+.pip{position:absolute;top:9px;width:9px;height:9px;border-radius:50%;
+  background:var(--gl);box-shadow:0 0 0 3px rgba(28,59,51,1)}
+.field-note{margin-top:20px;font-size:12.5px;line-height:1.7;color:rgba(244,241,234,.5);max-width:78ch}
+.field-say{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.45;
+  color:var(--cream);border-left:2px solid var(--gl);padding-left:20px;max-width:46ch}
+@media(max-width:820px){
+  .field-scale,.lane{grid-template-columns:1fr;gap:8px}
+  .lane-t{height:18px}.bar,.pip{top:4px}
+  .field-scale{display:none}
+}
+
+/* ── THE RECORD · signature moment ───────────────────────────
+   The moat is not "we test more". It is that a history becomes clinically
+   useful if somebody keeps it. So the record gets the page's largest visual. */
+.recsec{background:var(--gd)}
+.rec-head{max-width:60ch}
+.spine{position:relative;margin-top:52px;padding:0 0 6px}
+.spine:before{content:'';position:absolute;left:0;right:0;top:52px;height:1px;
+  background:linear-gradient(90deg,rgba(196,169,63,.15),rgba(196,169,63,.75),rgba(196,169,63,.35))}
+.nodes{display:grid;grid-template-columns:repeat(7,1fr);gap:0}
+.node{position:relative;padding-top:76px;text-align:left;padding-right:14px}
+.node:before{content:'';position:absolute;top:46px;left:0;width:13px;height:13px;border-radius:50%;
+  background:var(--gd);border:2px solid var(--gl)}
+.node.now:before{background:var(--gl)}
+.node .age{position:absolute;top:0;left:0;font-family:var(--serif);font-size:30px;color:var(--gl);line-height:1}
+.node .ev{font-size:12.5px;line-height:1.55;color:rgba(244,241,234,.8)}
+.node .pil{display:block;margin-top:7px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(244,241,234,.42)}
+.rec-sum{margin-top:44px;padding-top:26px;border-top:1px solid rgba(196,169,63,.28);
+  display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.rec-sum .big{font-family:var(--serif);font-size:30px;line-height:1.3;color:var(--cream);max-width:22ch}
+.rec-sum .sml{font-size:12.5px;line-height:1.7;color:rgba(244,241,234,.5);max-width:44ch}
+@media(max-width:900px){
+  .nodes{grid-template-columns:1fr}
+  .spine:before{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto;
+    background:linear-gradient(180deg,rgba(196,169,63,.15),rgba(196,169,63,.7))}
+  .node{padding:0 0 26px 40px}
+  .node:before{top:5px;left:0}
+  .node .age{position:static;display:block;font-size:22px;margin-bottom:5px}
+}
+
+/* ── CATEGORY DISCIPLINE · asymmetric ───────────────────────
+   65/35. Equal cards gave bad longevity medicine the same weight as FINISH;
+   the critique is supporting evidence, not the story. */
+.diff{grid-template-columns:1.85fr 1fr !important}
+@media(max-width:820px){.diff{grid-template-columns:1fr !important}}
+.diff .box:last-child{background:transparent;border-left:2px solid rgba(244,241,234,.18);
+  border-top:0;border-right:0;border-bottom:0;padding-left:24px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="nav"><div class="wrap navin"><a class="brand" href="PLACEHOLDER_FINISH_HOME_URL" aria-label="FINISH Performance Health — Pillar Three, Longevity and Wellness"><span class="brand-mark"><svg class="fi-logo" viewBox="7.6 9.0 720.7 203.2" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FINISH" focusable="false"><path fill="currentColor" d="M 647.855469 174.5 L 659.148438 174.5 L 659.148438 129.414062 L 716.972656 129.414062 L 716.972656 174.5 L 728.285156 174.5 L 728.285156 74.320312 L 716.972656 74.320312 L 716.972656 118.824219 L 659.148438 118.824219 L 659.148438 74.320312 L 647.855469 74.320312 Z M 573.027344 175.929688 C 592.921875 175.929688 607.234375 164.773438 607.234375 147.59375 L 607.234375 147.316406 C 607.234375 132 596.929688 123.84375 574.605469 118.96875 C 552.566406 114.25 547.40625 108.953125 547.40625 99.511719 L 547.40625 99.226562 C 547.40625 90.199219 555.714844 83.042969 568.734375 83.042969 C 579.042969 83.042969 588.335938 86.347656 597.644531 93.921875 L 604.226562 85.191406 C 594.066406 77.042969 583.617188 72.890625 569.019531 72.890625 C 549.992188 72.890625 536.109375 84.476562 536.109375 100.222656 L 536.109375 100.507812 C 536.109375 116.964844 546.699219 124.40625 569.746094 129.414062 C 590.773438 133.851562 595.78125 139.148438 595.78125 148.449219 L 595.78125 148.734375 C 595.78125 158.617188 586.917969 165.765625 573.449219 165.765625 C 559.578125 165.765625 549.558594 161.046875 539.121094 151.605469 L 532.101562 159.90625 C 544.128906 170.636719 557.144531 175.929688 573.027344 175.929688 M 480.46875 174.5 L 491.765625 174.5 L 491.765625 74.320312 L 480.46875 74.320312 Z M 348.8125 174.5 L 359.847656 174.5 L 359.847656 92.347656 L 424.535156 174.5 L 433.550781 174.5 L 433.550781 74.320312 L 422.523438 74.320312 L 422.523438 154.605469 L 359.421875 74.320312 L 348.8125 74.320312 Z M 290.605469 174.5 L 301.910156 174.5 L 301.910156 74.320312 L 290.605469 74.320312 Z M 178.144531 174.5 L 189.449219 174.5 L 189.449219 130.851562 L 243.6875 130.851562 L 243.6875 120.542969 L 189.449219 120.542969 L 189.449219 84.773438 L 250.125 84.773438 L 250.125 74.320312 L 178.144531 74.320312 Z M 178.144531 174.5"/><path fill="#B19000" d="M 39.4375 30.449219 C 38.925781 31.113281 38.417969 31.75 37.917969 32.378906 C 31.054688 41.40625 24.210938 50.476562 17.351562 59.546875 C 11.707031 66.886719 7.613281 72.609375 10.875 83.0625 C 11.980469 86.699219 14.089844 89.976562 17.105469 92.410156 C 23.429688 97.503906 33.300781 96.972656 40.738281 91.703125 C 60.253906 77.761719 48.210938 48.078125 39.4375 30.449219"/><path fill="#E1B600" d="M 71.652344 142.269531 C 64.691406 148.429688 62.203125 148.449219 62.429688 158.378906 C 62.597656 165.96875 62.992188 173.199219 63.605469 181.191406 C 81.738281 172.875 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.847656 114.136719 129.925781 106.664062 129.0625 99.136719 C 109.984375 113.492188 90.835938 127.859375 71.652344 142.269531"/><path fill="#E1B600" d="M 33.316406 159.710938 C 30.320312 162.367188 27.6875 165.484375 25.882812 169.222656 C 25.566406 168.367188 25.253906 167.507812 24.945312 166.617188 C 20.027344 153.34375 22.398438 140.09375 29.84375 130.179688 C 45.191406 109.710938 60.441406 89.332031 75.621094 69.09375 C 90.730469 48.960938 105.855469 28.949219 120.800781 8.980469 C 122.316406 21.941406 123.851562 34.902344 125.453125 47.890625 C 126.367188 55.480469 126.167969 62.898438 124.910156 69.652344 C 123.332031 76.507812 120.351562 82.101562 116.003906 85.898438 C 88.574219 110.320312 60.945312 134.867188 33.316406 159.710938"/><path fill="#B19000" d="M 35.105469 169.734375 C 32.152344 171.960938 29.65625 176.210938 31.523438 181.605469 C 36.644531 196.542969 42.210938 203.78125 55.96875 212.132812 C 54.136719 194.046875 52.339844 176.046875 50.597656 158.101562 C 45.445312 162.007812 40.253906 165.890625 35.105469 169.734375"/><path fill="#B19000" d="M 121.679688 116.492188 C 110.710938 140.425781 94.535156 159.628906 77.300781 169.09375 L 63.261719 176.792969 C 63.378906 178.257812 63.496094 179.71875 63.605469 181.191406 C 81.738281 172.878906 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.894531 114.496094 130.003906 107.355469 129.1875 100.1875 C 126.664062 105.625 124.175781 111.058594 121.679688 116.492188 M 76.628906 98.84375 C 58.789062 117.003906 40.898438 135.234375 22.9375 153.488281 L 22.398438 154.042969 C 22.054688 145.242188 24.769531 136.933594 29.84375 130.179688 L 75.621094 69.09375 C 89.8125 50.171875 104.023438 31.382812 118.085938 12.609375 L 112.847656 40.28125 C 109.90625 58.191406 102.351562 72.707031 90.316406 84.992188 C 85.71875 89.601562 81.191406 94.207031 76.628906 98.84375 M 40.738281 91.703125 C 60.253906 77.773438 48.210938 48.078125 39.4375 30.449219 L 37.917969 32.378906 C 36.730469 33.953125 35.535156 35.511719 34.34375 37.078125 C 33.535156 47.136719 32.726562 57.230469 31.972656 67.328125 C 31.863281 68.726562 31.738281 70.039062 31.59375 71.414062 C 30.535156 80.402344 28.433594 88.648438 25.363281 95.816406 C 30.464844 96.445312 36.085938 95.007812 40.738281 91.703125"/></svg><span class="brand-desc">Performance Health</span></span><span class="sep"></span><small>Longevity · Pillar Three</small></a><nav class="links" aria-label="Primary"><a href="#why">Why</a><a href="#model">How It Works</a><a href="#build">What We're Building</a><a href="#standard">The Standard</a><a class="btn gold" href="#interest">Join the Interest List</a></nav></div></header>
+<main id="main">
+<section class="hero dark"><div class="wrap heroin"><div><div class="status"><span class="dot"></span>Pillar Three · In Development</div><p class="ey">FINISH Longevity · Longevity & Wellness</p><h1>Your next twenty years are already being <em>written.</em></h1><p class="copy">FINISH Longevity is being designed to watch the long arc of health — movement, bone, metabolic health, sleep, cognition and regenerative strategy — across decades rather than visits.</p><div class="actions"><a class="btn gold" href="#interest">Join the Interest List</a><a class="btn ghost" href="#model">See How It Works</a></div><p class="note">Designed · not yet delivered. FINISH Longevity is not currently accepting patients.</p></div><div class="arc"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="core"><strong>20+</strong><span>Years, not visits</span><p>The unit of care we are designing for.</p></div></div></div></section>
+<section class="sec" id="why"><div class="wrap thesis"><div><p class="ey">The premise</p><div class="rule"></div><p class="left">Longevity is easy to turn into a catalog. We are building the opposite.</p></div><div><h2>The point is not to collect more data. It is to know what deserves action.</h2><p class="lead" style="margin-top:28px">A normal annual panel can coexist with a life that is quietly getting smaller. Strength changes. Bone changes. Sleep changes. Movement narrows. Recovery slows. Confidence shifts. Individually, none of those moments may look dramatic. Across ten years, they can become the story.</p><p class="lead" style="margin-top:16px">FINISH Longevity is being designed to hold that story in one place — on the same record, with the same team, and with the musculoskeletal foundation that makes every other longevity strategy usable.</p><p class="quote">The question is not simply how long you live. It is how much of yourself is still available when you get there.</p></div></div></section>
+<section class="sec method" id="model"><div class="wrap"><p class="ey">The model</p><h2>Measure. Decide. Act. Re-measure. Stay.</h2><div class="rule"></div><p class="lead">The longevity category often makes complexity look like sophistication. Our aim is the opposite: enough measurement to make a better decision, enough intervention to matter, and enough continuity to know whether it did.</p><div class="steps"><div class="step"><div class="num">01</div><h3>Establish the trajectory</h3><p>Begin with history, current capacity and the measurements that are clinically relevant — not every test simply because it exists.</p></div><div class="step"><div class="num">02</div><h3>Interpret the whole record</h3><p>Orthopedic history, movement, bone, cardiometabolic data, recovery and performance belong in the same conversation rather than separate portals.</p></div><div class="step"><div class="num">03</div><h3>Act selectively</h3><p>The future model will prioritize the smallest number of actions likely to matter. More interventions will not automatically mean better care.</p></div><div class="step"><div class="num">04</div><h3>Re-measure what should change</h3><p>A second intervention should be decided from response and data, not enthusiasm. If something is not working, the plan should change.</p></div><div class="step"><div class="num">05</div><h3>Stay with the person</h3><p>The value of longitudinal care is continuity: the clinician knows what changed, what did not, what was tried, and what mattered ten years ago.</p></div></div></div></section>
+<section class="sec domains dark" id="build"><div class="wrap">
+  <div class="top2">
+    <div><p class="ey">Areas of longitudinal attention</p>
+      <h2>These systems do not live in six boxes. Neither should your care.</h2></div>
+    <p class="lead">Movement runs the whole length of a life. Bone has windows. Metabolic health changes
+      direction. Sleep modulates everything above it. Cognition matters more as the years accumulate. And
+      regenerative strategy enters occasionally and selectively, if at all — never as a permanent lane.</p>
+  </div>
+
+  <div class="field" role="img" aria-label="An editorial diagram showing six areas of longitudinal attention running across a lifespan at different times and durations. Movement, bone and sleep run the full length; metabolic and cognitive attention begin later; regenerative strategy appears only as occasional selective points.">
+    <div class="field-scale">
+      <span>Area of attention</span>
+      <span class="field-ticks"><span>Earlier</span><span>Midlife</span><span>Later</span></span>
+    </div>
+      <div class="lane">
+        <div class="lane-n"><b>Movement &amp; capacity</b><span>Strength, balance, mobility — the capacity to keep doing the things that make your life yours.</span></div>
+        <div class="lane-t"><div class="bar full" style="left:0%;right:0%"></div></div>
+      </div>
+      <div class="lane">
+        <div class="lane-n"><b>Bone &amp; structural health</b><span>Bone across the lifespan, with musculoskeletal function treated as infrastructure rather than an afterthought.</span></div>
+        <div class="lane-t"><div class="bar" style="left:0%;right:0%"></div></div>
+      </div>
+      <div class="lane">
+        <div class="lane-n"><b>Metabolic &amp; hormonal health</b><span>Patterns read as trajectories rather than isolated numbers, with clinical action only where it is warranted.</span></div>
+        <div class="lane-t"><div class="bar" style="left:6%;right:0%"></div></div>
+      </div>
+      <div class="lane">
+        <div class="lane-n"><b>Sleep &amp; recovery</b><span>Whether training, stress and everyday life are being absorbed — or quietly accumulating a cost.</span></div>
+        <div class="lane-t"><div class="bar mod" style="left:0%;right:0%"></div></div>
+      </div>
+      <div class="lane">
+        <div class="lane-n"><b>Cognition &amp; resilience</b><span>Considered as part of whole-person function, alongside movement, metabolic health and daily capacity.</span></div>
+        <div class="lane-t"><div class="bar" style="left:26%;right:0%"></div></div>
+      </div>
+      <div class="lane">
+        <div class="lane-n"><b>Regenerative strategy</b><span>Only where evidence and clinical context justify it — including an honest account of what the evidence does not show.</span></div>
+        <div class="lane-t"><div class="pip" style="left:44%"></div><div class="pip" style="left:58%"></div><div class="pip" style="left:79%"></div></div>
+      </div>
+  </div>
+
+  <p class="field-note">Illustrative, not a schedule, not a clinical timeline and not a scientific model. Where a lane begins is a matter of emphasis, not an age at which attention should start. These are areas of
+    longitudinal attention, not a proprietary six-domain instrument and not a published service menu.
+    Each future offering must clear an evidence, scope, pricing and outcome-tracking standard before it
+    belongs here.</p>
+
+  <p class="field-say">The value is not in the number of things watched. It is in the fact that the same
+    people keep watching.</p>
+</div></section>
+<section class="sec"><div class="wrap"><p class="ey">Category discipline</p><h2 style="max-width:12ch">What FINISH Longevity will — and will not — become.</h2><div class="diff"><article class="box darkbox"><p class="ey">Built to become</p><h3>A clinical relationship measured in years.</h3><p>The model is intended to be deliberately small, longitudinal and accountable — with the patient, the record and the clinical rationale remaining intact as needs change.</p><ul><li>One record across the FINISH ecosystem</li><li>Published rationale before intervention</li><li>Outcome tracking from the beginning</li><li>Transparent pricing when the model opens</li><li>Care that can say “you do not need this”</li></ul></article><article class="box"><p class="ey">Will not become</p><h3>A storefront for the newest longevity trend.</h3><p>Novelty is not a clinical indication. The FINISH standard is meant to make it harder — not easier — for an exciting therapy to become a product before the evidence, scope and patient fit are clear.</p><ul><li>A supplement sales channel</li><li>A subscription to tests nobody acts on</li><li>“Anti-aging” promises</li><li>A therapy menu disconnected from clinical need</li><li>Claims that outrun the evidence</li></ul></article></div></div></section>
+<section class="sec recsec dark"><div class="wrap">
+  <div class="rec-head">
+    <p class="ey">What the record makes possible</p>
+    <h2>Longevity does not begin when you enter Pillar Three.</h2>
+    <div class="rule"></div>
+    <p class="lead">A knee injury at fifty-eight, a DEXA at sixty, a change in strength at sixty-three and a
+      metabolic shift at sixty-five are not four unrelated events. The advantage of FINISH is that they do
+      not have to become four unrelated charts.</p>
+  </div>
+
+  <div class="spine" role="img" aria-label="An illustrative composite record spanning fourteen years, from a knee injury at fifty-eight through baselines, tracked changes and a later injury, to still moving at seventy-two.">
+    <div class="nodes">
+      <div class="node "><span class="age">58</span>
+        <p class="ev">Knee injury. Examined, imaged and treated the week it happened.<span class="pil">Pillar I</span></p></div>
+      <div class="node "><span class="age">60</span>
+        <p class="ev">First DEXA. Bone and lean mass recorded while they are still a baseline.<span class="pil">Pillar II</span></p></div>
+      <div class="node "><span class="age">61</span>
+        <p class="ev">Cardiorespiratory and metabolic baseline. Training zones, not a report.<span class="pil">Pillar II</span></p></div>
+      <div class="node "><span class="age">63</span>
+        <p class="ev">Strength trajectory changes. Noticed against earlier baseline measures.<span class="pil">Pillar II</span></p></div>
+      <div class="node "><span class="age">65</span>
+        <p class="ev">Metabolic markers shift. A twenty-year conversation, not a twelve-week one.<span class="pil">Pillar III</span></p></div>
+      <div class="node "><span class="age">68</span>
+        <p class="ev">A new musculoskeletal episode. Seen by people who already know the history.<span class="pil">Pillar I</span></p></div>
+      <div class="node now"><span class="age">72</span>
+        <p class="ev">Still walking. Still lifting. Still driving to the trailhead.<span class="pil">The outcome</span></p></div>
+    </div>
+  </div>
+
+  <div class="rec-sum">
+    <p class="big">One person. One record. Fourteen years of context.</p>
+    <p class="sml">An illustrative composite, not a patient. Nobody has to understand a single named therapy
+      to understand why that history is worth keeping — or what it costs to have it scattered across four
+      practices who have never spoken to each other.</p>
+  </div>
+
+  <div class="record" style="margin-top:44px">
+    <div class="rr"><div class="rk">Pillar I</div><div class="rv"><b>DirectOrtho+</b><br>Protect movement when something hurts.</div></div>
+    <div class="rr"><div class="rk">Pillar II</div><div class="rv"><b>FINISH Healthspan</b><br>Measure capacity before decline becomes diagnosis.</div></div>
+    <div class="rr"><div class="rk">Pillar III</div><div class="rv"><b>FINISH Longevity</b><br>Hold the long view as the record becomes more valuable with time.</div></div>
+    <div class="rr"><div class="rk">The proof</div><div class="rv"><b>One team. One record. One continuous relationship.</b></div></div>
+  </div>
+</div></section>
+<section class="sec standard" id="standard"><div class="wrap stdgrid"><div><p class="ey">Before it opens</p><h2>The standard comes before the launch date.</h2><div class="rule"></div><p class="lead">We are not interested in being early if being early means being vague. FINISH Longevity will open only when the clinical model can meet the same transparency and accountability standards as the rest of FINISH.</p></div><div><div class="gate"><small>Gate 01</small><h3>Named physician oversight and documented scope</h3><p>Every therapy must have a clear supervising structure and a defined clinical boundary.</p></div><div class="gate"><small>Gate 02</small><h3>An evidence position for every intervention</h3><p>What it is for, who may benefit, what remains uncertain, and what it does not do.</p></div><div class="gate"><small>Gate 03</small><h3>Published pricing</h3><p>Longevity does not get an exception from FINISH transparency because the category is premium.</p></div><div class="gate"><small>Gate 04</small><h3>Outcome tracking from day one</h3><p>If we cannot define what success should look like and measure response, the intervention does not belong in the model.</p></div></div></div></section>
+<section class="sec director"><div class="wrap"><p class="ey">Pillar direction</p><div class="dir"><div class="ph"></div><div><p class="ey">Co-Founder & Director, FINISH Longevity</p><h3>Christopher Gaunder, MD</h3><p>FINISH Longevity is being developed under the direction of Dr. Christopher Gaunder as part of the larger FINISH Performance Health clinical ecosystem. Full founder biographies and organizational roles live on the FINISH About & Our Team page.</p><p class="scope">Dr. Gaunder's separate orthopedic surgical practice is independent of FINISH Performance Health. This page does not describe surgical services or an active FINISH Longevity clinical program.</p><a class="btn darkbtn" style="margin-top:20px" href="PLACEHOLDER_FINISH_ABOUT_URL">Meet the FINISH Team</a></div></div></div></section>
+<section class="sec interest dark" id="interest"><div class="wrap interestgrid"><div><p class="ey">Before it opens</p><h2>We will tell you when the standard is met.</h2><div class="rule"></div><p class="lead">FINISH Longevity is currently in development. No launch campaign and no sales sequence. We will contact you when the model is ready.</p><p style="font-family:var(--serif);font-style:italic;font-size:22px;margin-top:16px">We will not open it because a date arrived. We will open it when the model is ready.</p></div><form class="form" id="interestForm" action="PLACEHOLDER_INTEREST_FORM_URL" method="post" novalidate><label>Name</label><input name="name" required><label>Email</label><input name="email" type="email" required><label>Phone (optional)</label><input name="phone" type="tel"><button class="btn gold" type="submit">Join the Interest List</button><p class="formstatus" id="formStatus" role="status" aria-live="polite" hidden></p>
+<p class="formnote">This form is for launch updates only. It does not request medical information, schedule care or create a patient relationship.</p></form></div></section>
+<section class="sec"><div class="wrap"><p class="ey">FINISH Performance Health</p><h2 style="font-size:42px;max-width:14ch">Three pillars. One practice, across a life.</h2><div class="eco"><a class="ec" href="PLACEHOLDER_DIRECTORTHO_URL"><p class="ey">Pillar One</p><h3>DirectOrtho+</h3><p>Precision Musculoskeletal Medicine. Conservative-first orthopedic and sports medicine.</p><span class="badge">Open Now</span></a><a class="ec" href="PLACEHOLDER_HEALTHSPAN_URL"><p class="ey">Pillar Two</p><h3>FINISH Healthspan</h3><p>Healthspan Optimization and Performance. The measured core of the practice.</p><span class="badge">Open Now</span></a><div class="ec current"><p class="ey">Pillar Three · You Are Here</p><h3>FINISH Longevity</h3><p>Longevity and Wellness. Designed for the long arc of health.</p><span class="badge">In Development</span></div></div></div></section>
+</main>
+<footer><div class="wrap"><div class="ft"><span style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:8px;"><svg class="fi-logo" style="height:24px;color:var(--cream)" viewBox="7.6 9.0 720.7 203.2" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FINISH" focusable="false"><path fill="currentColor" d="M 647.855469 174.5 L 659.148438 174.5 L 659.148438 129.414062 L 716.972656 129.414062 L 716.972656 174.5 L 728.285156 174.5 L 728.285156 74.320312 L 716.972656 74.320312 L 716.972656 118.824219 L 659.148438 118.824219 L 659.148438 74.320312 L 647.855469 74.320312 Z M 573.027344 175.929688 C 592.921875 175.929688 607.234375 164.773438 607.234375 147.59375 L 607.234375 147.316406 C 607.234375 132 596.929688 123.84375 574.605469 118.96875 C 552.566406 114.25 547.40625 108.953125 547.40625 99.511719 L 547.40625 99.226562 C 547.40625 90.199219 555.714844 83.042969 568.734375 83.042969 C 579.042969 83.042969 588.335938 86.347656 597.644531 93.921875 L 604.226562 85.191406 C 594.066406 77.042969 583.617188 72.890625 569.019531 72.890625 C 549.992188 72.890625 536.109375 84.476562 536.109375 100.222656 L 536.109375 100.507812 C 536.109375 116.964844 546.699219 124.40625 569.746094 129.414062 C 590.773438 133.851562 595.78125 139.148438 595.78125 148.449219 L 595.78125 148.734375 C 595.78125 158.617188 586.917969 165.765625 573.449219 165.765625 C 559.578125 165.765625 549.558594 161.046875 539.121094 151.605469 L 532.101562 159.90625 C 544.128906 170.636719 557.144531 175.929688 573.027344 175.929688 M 480.46875 174.5 L 491.765625 174.5 L 491.765625 74.320312 L 480.46875 74.320312 Z M 348.8125 174.5 L 359.847656 174.5 L 359.847656 92.347656 L 424.535156 174.5 L 433.550781 174.5 L 433.550781 74.320312 L 422.523438 74.320312 L 422.523438 154.605469 L 359.421875 74.320312 L 348.8125 74.320312 Z M 290.605469 174.5 L 301.910156 174.5 L 301.910156 74.320312 L 290.605469 74.320312 Z M 178.144531 174.5 L 189.449219 174.5 L 189.449219 130.851562 L 243.6875 130.851562 L 243.6875 120.542969 L 189.449219 120.542969 L 189.449219 84.773438 L 250.125 84.773438 L 250.125 74.320312 L 178.144531 74.320312 Z M 178.144531 174.5"/><path fill="#B19000" d="M 39.4375 30.449219 C 38.925781 31.113281 38.417969 31.75 37.917969 32.378906 C 31.054688 41.40625 24.210938 50.476562 17.351562 59.546875 C 11.707031 66.886719 7.613281 72.609375 10.875 83.0625 C 11.980469 86.699219 14.089844 89.976562 17.105469 92.410156 C 23.429688 97.503906 33.300781 96.972656 40.738281 91.703125 C 60.253906 77.761719 48.210938 48.078125 39.4375 30.449219"/><path fill="#E1B600" d="M 71.652344 142.269531 C 64.691406 148.429688 62.203125 148.449219 62.429688 158.378906 C 62.597656 165.96875 62.992188 173.199219 63.605469 181.191406 C 81.738281 172.875 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.847656 114.136719 129.925781 106.664062 129.0625 99.136719 C 109.984375 113.492188 90.835938 127.859375 71.652344 142.269531"/><path fill="#E1B600" d="M 33.316406 159.710938 C 30.320312 162.367188 27.6875 165.484375 25.882812 169.222656 C 25.566406 168.367188 25.253906 167.507812 24.945312 166.617188 C 20.027344 153.34375 22.398438 140.09375 29.84375 130.179688 C 45.191406 109.710938 60.441406 89.332031 75.621094 69.09375 C 90.730469 48.960938 105.855469 28.949219 120.800781 8.980469 C 122.316406 21.941406 123.851562 34.902344 125.453125 47.890625 C 126.367188 55.480469 126.167969 62.898438 124.910156 69.652344 C 123.332031 76.507812 120.351562 82.101562 116.003906 85.898438 C 88.574219 110.320312 60.945312 134.867188 33.316406 159.710938"/><path fill="#B19000" d="M 35.105469 169.734375 C 32.152344 171.960938 29.65625 176.210938 31.523438 181.605469 C 36.644531 196.542969 42.210938 203.78125 55.96875 212.132812 C 54.136719 194.046875 52.339844 176.046875 50.597656 158.101562 C 45.445312 162.007812 40.253906 165.890625 35.105469 169.734375"/><path fill="#B19000" d="M 121.679688 116.492188 C 110.710938 140.425781 94.535156 159.628906 77.300781 169.09375 L 63.261719 176.792969 C 63.378906 178.257812 63.496094 179.71875 63.605469 181.191406 C 81.738281 172.878906 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.894531 114.496094 130.003906 107.355469 129.1875 100.1875 C 126.664062 105.625 124.175781 111.058594 121.679688 116.492188 M 76.628906 98.84375 C 58.789062 117.003906 40.898438 135.234375 22.9375 153.488281 L 22.398438 154.042969 C 22.054688 145.242188 24.769531 136.933594 29.84375 130.179688 L 75.621094 69.09375 C 89.8125 50.171875 104.023438 31.382812 118.085938 12.609375 L 112.847656 40.28125 C 109.90625 58.191406 102.351562 72.707031 90.316406 84.992188 C 85.71875 89.601562 81.191406 94.207031 76.628906 98.84375 M 40.738281 91.703125 C 60.253906 77.773438 48.210938 48.078125 39.4375 30.449219 L 37.917969 32.378906 C 36.730469 33.953125 35.535156 35.511719 34.34375 37.078125 C 33.535156 47.136719 32.726562 57.230469 31.972656 67.328125 C 31.863281 68.726562 31.738281 70.039062 31.59375 71.414062 C 30.535156 80.402344 28.433594 88.648438 25.363281 95.816406 C 30.464844 96.445312 36.085938 95.007812 40.738281 91.703125"/></svg><span style="letter-spacing:.2em;font-size:9.5px;text-transform:uppercase;color:var(--gl)">Performance Health</span></span><span>394 S. Milledge Ave, Suites 101 & 102 · Athens, GA 30605 · 706-224-9951</span></div><div class="fine"><p>FINISH Longevity is in development and is not currently accepting patients. No services, pricing, therapies or clinical outcomes are promised or offered on this page. References to future areas of focus describe the intended scope of the program only.</p><p>This page is general information, not medical advice, and does not create a patient relationship. FINISH Performance Health is an independent healthcare practice in Athens, Georgia. <strong>If you are experiencing a medical emergency, call 911.</strong></p></div><p class="verse">“Not to us, Lord, not to us — but to Your name be the glory.” · Psalm 115:1</p></div></footer>
+<div class="mobile"><a href="#interest">Join the Interest List</a></div>
+
+<script>
+(function(){
+  "use strict";
+  /* ── INTEREST FORM SAFETY NET ───────────────────────────────────────────
+     The form posts to PLACEHOLDER_INTEREST_FORM_URL. Until that is a real
+     endpoint, submitting would post into nothing and look broken. This
+     intercepts, validates, and tells the person what to do instead. Delete
+     the guard (not the validation) once the endpoint is live. */
+  var form   = document.getElementById('interestForm');
+  var status = document.getElementById('formStatus');
+  if (!form) return;
+  var UNRESOLVED = /^PLACEHOLDER_/;
+
+  function say(msg, state){
+    status.hidden = false;
+    status.textContent = msg;
+    status.setAttribute('data-state', state || 'ok');
+  }
+
+  form.addEventListener('submit', function(e){
+    var name  = form.querySelector('[name=name]');
+    var email = form.querySelector('[name=email]');
+    if (!name.value.trim() || !email.value.trim() || email.value.indexOf('@') === -1) {
+      e.preventDefault();
+      say('Please add a name and a valid email address.', 'err');
+      (!name.value.trim() ? name : email).focus();
+      return;
+    }
+    if (UNRESOLVED.test(form.getAttribute('action'))) {
+      e.preventDefault();
+      say('The interest list is not connected yet. Email us at ' +
+          'PLACEHOLDER_INTEREST_EMAIL and we will add you by hand.', 'err');
+    }
+  });
+
+  /* Unresolved navigation links go inert rather than 404. Booking-style links
+     do not exist on this page by design: Pillar Three is not open. */
+  Array.prototype.forEach.call(document.querySelectorAll('a[href]'), function(a){
+    if (UNRESOLVED.test(a.getAttribute('href'))) {
+      a.setAttribute('href', '#');
+      a.setAttribute('aria-disabled', 'true');
+      a.setAttribute('data-fallback', 'inert');
+    }
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  FINISH PERFORMANCE HEALTH — BRAND SYSTEM, RELEASE 1
+  Frozen 6 September 2026 · Athens, Georgia
+  About & Our Team v8.5 — the people (authoritative)
+
+  DOCTRINE OF RECORD: FINISH_MasterBrand_BrandBook_v3.0.html
+  Where a page and the book disagree, one of them is wrong and somebody names
+  which within the week. A published page outranks the book on price. The book
+  outranks any page on naming, claims, and what a pillar may say about itself.
+
+  THE RELEASE FAMILY — versioned together. Change one, check the rest.
+      FINISH_MasterBrand_BrandBook_v3.0.html      parent doctrine
+      FINISH_MasterBrand_Web_v2.3.html            parent story & entry point
+      FINISH_MasterBrand_About_v8.5.html          the people (authoritative)
+      FINISH_DirectOrthoPlus_BrandBook_V4.4.4     Pillar One standard
+      DirectOrtho-landing_v10.2.html              Pillar One conversion
+      FINISH_Healthspan_Landing_v6.1.html         Pillar Two conversion & prices
+      FINISH_Longevity_Landing_v3.1.html          Pillar Three page
+
+  SETTLED IN THIS RELEASE — not to be reopened inside a single file.
+      Type ........ Playfair Display over DM Sans is the web system of record,
+                    and the serif-over-sans inversion is deliberate. Gotham and
+                    Sherborne are print and identity only. Montserrat and
+                    Spectral are withdrawn.
+      Names ....... DirectOrtho+, FINISH Healthspan, FINISH Longevity are the
+                    names. The lines beneath them are descriptors and are never
+                    used as the name, including in a title tag or an h1.
+      Marks ....... The gold horizontal lockup sits on every ground unchanged,
+                    pillar grounds included. Brand Book p.21.
+      Pillar II ... Prices are published. The FINISH Healthspan page is the
+                    public source of record; the book carries headlines only.
+      Pillar III .. In development. No service, price or clinical claim, and no
+                    membership may present it as an included benefit.
+      Membership .. Two products: DirectOrtho+ Membership (Pillar One, stands
+                    alone) and FINISH Healthspan Membership (Bronze, Silver,
+                    Gold — contains Pillar One access). Neither is ever called
+                    "the FINISH membership" in published copy.
+      Recovery .... The room is the Recovery Zone on every surface.
+  ----------------------------------------------------------------------------
+  FROZEN. This file is content- and doctrine-complete at Release 1. Nothing in
+  it may be edited in isolation. Any change to a statement of naming, price,
+  pillar status, membership, mark or type is a change to the release: all seven
+  files move together, and the next state is Release 2.
+
+  PERMITTED WITHOUT REOPENING THE RELEASE — none of these change what the
+  system says, only what it points at:
+      · replacing PLACEHOLDER_ tokens with live URLs
+      · adding photography and the 1200x630 social card
+      · filling named people, credentials and photographs on the team page
+      · stripping these deployment comments before publication
+
+  KNOWN OPEN AT FREEZE — carried deliberately, not overlooked:
+      · FINISH_Membership_Tiers.docx and the v28 membership model still carry
+        the superseded Gold outcome guarantee, "testing on request" and
+        supplement language. They become contractual the moment a member signs
+        one, and a contract beats a price list. Reconcile before either goes
+        operational.
+      · Clinical-team credentials on the About page are placeholders pending
+        verification of actual licensure. The women's health role is a
+        physician role and its name must reach the disclosure block.
+      · DirectOrtho-landing_v10.2.html carries one unclosed div element, inherited
+        from v10 and left rather than guessed at. Browsers recover; a validator
+        will not.
+      · Founding pricing runs six months. At transition, visible copy, FAQ
+        worked examples and JSON-LD schema move in one pass or not at all.
+  ----------------------------------------------------------------------------
+  OPEN, NOT BLOCKING. The footer disclosure on this page is still weighted
+  toward DirectOrtho+ specifics. On the authoritative parent team page the
+  disclosure should lead with FINISH-level statements — independent, direct-pay,
+  does not bill insurance, no surgical services — with pillar-specific legal
+  language living on the pillar destination it governs. Dr. Gaunder's separation
+  stays here, because it is a statement about a founder rather than a pillar.
+
+  OPEN. Clinical-team credential lines are placeholders and must be checked
+  against actual licensure before publication. The women's health role is a
+  physician role: its card carries MD, and the name must match the medical staff
+  roster and the disclosure block.
+
+  WHAT CHANGED IN v8. This page was parent-brand content wearing DirectOrtho+
+  clothes: navy palette, DirectOrtho+ nav, a meta description that narrowed
+  FINISH to non-surgical orthopedics. It is now a FINISH Performance Health
+  page — gold/charcoal, parent nav, parent logo — and it is the single
+  authoritative place people live in this ecosystem.
+
+  THE GOVERNING RULE: people belong to FINISH, expertise belongs to the pillars.
+  No pillar site repeats a founder biography. DirectOrtho+ shows Kelly plus its
+  care roles under "Who You'll See" and links back here. FINISH Healthspan and
+  FINISH Longevity will do the same. This is what stops three pillars becoming
+  three unrelated practices.
+
+  TITLES OF RECORD — one title each, at parent level. Pillar pages may add a
+  ROLE line ("your treating clinician for every visit") but never a new title.
+      Kelly Ward, MMSc, PA-C ... Co-Founder & Clinical Director
+      Matthew Farmer, MD ....... Co-Founder & Medical Director
+      Christopher Gaunder, MD .. Co-Founder & Director, FINISH Longevity
+  RETIRED, do not reintroduce: "Co-Founder & CEO" (Nov 2024 guidelines mock),
+  "Co-Founder and Healthspan Coach" (business card V5.0), "Direct Care Director"
+  (DirectOrtho+ landing), "Your Treating Clinician" (DirectOrtho+ Book, pre-V4.4).
+  Kelly's business card needs reprinting to match. If "Healthspan Coach" names a
+  real Pillar Two role, add it as a role line under FINISH Healthspan — not as
+  his identity on a card handed to orthopedic patients.
+
+  STILL OPEN BEFORE LAUNCH:
+
+  1. NAME THE CLINICAL TEAM. The six role cards now show roles without name
+     placeholders, which reads as deliberate rather than unfinished. Add names,
+     credentials and photos at launch.
+
+  2. BOARD CERTIFICATIONS. Reconcile all three bios against the live versions
+     at finishperformancehealth.com/our-team/ and confirm certifications.
+
+  3. WRITE THE CANYON DETAIL. Search "CANYON DETAIL". One concrete moment from
+     that hike is the most memorable thing available to this page and the only
+     part no competitor can copy. Two sentences.
+
+  4. REPLACE EVERY PLACEHOLDER. Search "PLACEHOLDER_". Booking links fall back
+     to the phone number until they are real, so no CTA can 404.
+         PLACEHOLDER_FINISH_HOME_URL   parent landing page
+         PLACEHOLDER_DIRECTORTHO_URL   Pillar One site
+         PLACEHOLDER_BASELINE_URL      Pillar Two booking flow
+         PLACEHOLDER_ABOUT_URL         this page
+
+  5. ADD THE PHOTOGRAPHS below. Every image degrades gracefully; the layout does
+     not shift if a file is missing. Shoot interaction, not portraiture — the
+     brand argument is that the patient is in the room while the team talks to
+     each other.
+
+  6. STRIP THESE DEPLOYMENT COMMENTS last.
+
+  IMAGES MANIFEST (place in /images/ alongside this file)
+     kelly-ward.jpg ............. 800x1000
+     matthew-farmer.jpg ......... 800x1000
+     christopher-gaunder.jpg .... 800x1000
+     origin-trail.jpg ........... 1000x1250  the hike, or the clinic space
+     og-about.jpg ............... 1200x630   social share card
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no,address=no,email=no">
+<title>About &amp; Our Team | FINISH Performance Health · Athens, GA</title>
+<meta name="description" content="The people behind FINISH Performance Health in Athens, Georgia — Kelly Ward, MMSc, PA-C, Dr. Matthew Farmer and Dr. Christopher Gaunder. One practice across three pillars: precision musculoskeletal medicine, healthspan optimization and performance, and longevity and wellness. One practice, across a life.">
+<link rel="canonical" href="PLACEHOLDER_ABOUT_URL">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FINISH Performance Health">
+<meta property="og:title" content="About &amp; Our Team · FINISH Performance Health · Athens, GA">
+<meta property="og:description" content="Three co-founders, one shared conviction about how care should work across a lifetime. Independent by design, in Athens, Georgia.">
+<meta property="og:url" content="PLACEHOLDER_ABOUT_URL">
+<meta property="og:image" content="PLACEHOLDER_OG_IMAGE_URL">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About &amp; Our Team · FINISH Performance Health">
+<meta name="twitter:description" content="Three co-founders, one shared conviction about how care should work across a lifetime.">
+<meta name="twitter:image" content="PLACEHOLDER_OG_IMAGE_URL">
+
+<meta name="theme-color" content="#272727">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23272727'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='20' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3EF%3C/text%3E%3Cpath d='M24 7h5M26.5 4.5v5' stroke='%23AD9227' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- Brand Book V4.4 palette. Identical to the landing page. ---- */
+    --char:#272727; --char-mid:#3A3A38; --char-deep:#1C1C1C;
+    --gold:#AD9227; --gold-lift:#C4A93F; --gold-soft:#BFA43A;
+    --cream:#F4F1EA; --cream-deep:#EAE4D6; --white:#FFFFFF;
+    --ink:#272727;            /* book: --ink */
+    --mid-gray:#5E5A53;            /* muted tone for captions; AA on cream */
+    --ink-soft:#3A3A38;            /* book: --ink-soft */
+    --light-gray:#EAE4D6;          /* book: --cream-deep, used for hairlines */
+    --rule:rgba(173,146,39,0.30);  /* book: --line-dark */
+    --line-light:rgba(39,39,39,0.14);
+    /* Brand gold is AA-safe on navy (6.58:1) but fails on white (2.64:1) and
+       cream (2.34:1). --gold-deep is the same hue and saturation at 34%
+       lightness: 5.28:1 on white, 4.68:1 on cream. */
+    --gold-deep:#7E6B1E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  a{color:inherit;text-decoration:none;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:88px;}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--white);line-height:1.7;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--gold);color:var(--char-deep);
+    padding:14px 22px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+  .skip-link:focus{left:0;}
+
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(39,39,39,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);}
+  .nav-in{max-width:1040px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+
+  /* ── FINISH LOGO ──────────────────────────────────────────
+     Real vector from FINISH_Logos_2.ai. Gold mark + charcoal wordmark on light
+     grounds; all-white reverse on dark. Never a gold mark with white type. */
+  .fi-logo{height:1em;width:auto;aspect-ratio:3.4233;flex:none;display:block;}
+  .fi-lockup{display:inline-flex;flex-direction:column;gap:.16em;line-height:1;text-decoration:none;}
+  .fi-descriptor{font-family:'DM Sans',sans-serif;font-weight:400;font-size:.175em;
+    letter-spacing:.34em;text-indent:.34em;text-transform:uppercase;white-space:nowrap;
+    align-self:stretch;text-align:right;}
+  .nav-logo{line-height:1;}
+  .nav-cta{display:flex;gap:10px;align-items:center;}
+  .btn{display:inline-block;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;transition:all .2s ease;white-space:nowrap;}
+  .btn-gold{background:var(--gold);color:var(--char-deep);border:1.5px solid var(--gold);}
+  .btn-gold:hover{background:var(--gold-lift);border-color:var(--gold-lift);}
+  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+  .btn-ghost-gold{background:transparent;color:var(--gold-lift);border:1.5px solid var(--gold-lift);}
+  .btn-ghost-gold:hover{background:var(--gold-lift);color:var(--char-deep);border-color:var(--gold-lift);}
+  .btn-ghost-dark{background:transparent;color:var(--char);border:1.5px solid var(--char);}
+  .btn-ghost-dark:hover{background:var(--char);color:var(--white);}
+  .nav-link{display:none;}
+  @media(min-width:900px){.nav-link{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:500;color:rgba(255,255,255,.72);text-decoration:none;padding:12px 6px;}
+    .nav-link:hover{color:var(--gold);}}
+  @media(max-width:620px){.nav-logo{font-size:21px;}.nav .btn{padding:10px 14px;font-size:11px;}}
+
+  /* HERO */
+  .hero{background:var(--char);color:var(--white);position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;top:0;right:0;width:38%;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(173,146,39,.05) 100%);pointer-events:none;}
+  .hero-in{max-width:1040px;margin:0 auto;padding:78px 28px 70px;position:relative;z-index:2;}
+  .eyebrow{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+  .hero h1{font-size:52px;line-height:1.1;color:var(--white);margin-bottom:22px;max-width:18ch;}
+  .hero h1 em{font-style:italic;color:rgba(255,255,255,.55);}
+  .hero-lead{font-size:19px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.78);max-width:56ch;}
+  .hero-micro{margin-top:26px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62);}
+  .hero-micro b{color:var(--gold-lift);font-weight:600;}
+  @media(max-width:720px){.hero h1{font-size:36px;}.hero-in{padding:56px 28px 50px;}}
+
+  /* SECTION SHELL */
+  section{padding:72px 0;}
+  .sec-eyebrow{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;}
+  .promise .sec-eyebrow,.faith .sec-eyebrow{color:var(--gold-lift);}
+  .sec-title{font-size:34px;color:var(--char);line-height:1.2;margin-bottom:20px;max-width:22ch;}
+  .gold-rule{width:44px;height:2px;background:var(--gold);margin:0 0 24px;}
+  .lead{font-size:17px;font-weight:300;line-height:1.85;color:var(--ink);max-width:62ch;}
+  .lead p{margin-bottom:15px;} .lead p:last-child{margin-bottom:0;}
+  .lead .kicker{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--char);}
+
+  /* photo panels — the labelled placeholder sits behind the image, so a missing
+     file leaves a captioned panel of the same size rather than a layout shift */
+  .ph{position:relative;background:var(--light-gray);border-top:3px solid var(--gold);overflow:hidden;margin:0;}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+  .ph-label{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:18px;color:var(--mid-gray);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;}
+
+  /* ORIGIN */
+  .origin{background:var(--cream);}
+  .origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+  .origin .ph{aspect-ratio:4/5;}
+  @media(max-width:760px){.origin-grid{grid-template-columns:1fr;gap:32px;}.origin .ph{aspect-ratio:16/10;}}
+
+  /* PROMISE band */
+  .promise{background:var(--char);color:var(--white);text-align:center;}
+  .promise-line{font-family:'Playfair Display',serif;font-weight:400;font-size:30px;font-style:italic;
+    line-height:1.4;color:rgba(255,255,255,.92);max-width:26ch;margin:0 auto;}
+  .promise-triad{display:flex;justify-content:center;gap:14px;margin-top:26px;font-size:13px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lift);flex-wrap:wrap;}
+  .promise-triad span{color:rgba(255,255,255,.45);}
+  @media(max-width:620px){.promise-line{font-size:24px;}}
+
+  /* TEAM */
+  .team-intro{text-align:center;max-width:60ch;margin:0 auto 8px;}
+  .team-intro .sec-title{margin:0 auto 18px;}
+  .partner-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold-deep);border:1px solid var(--gold-deep);border-radius:2px;padding:5px 12px;margin-bottom:30px;}
+
+  .person{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:start;padding:44px 0;border-top:1px solid var(--light-gray);}
+  .person:first-of-type{border-top:none;}
+  .person .ph{aspect-ratio:4/5;}
+  .person-name{font-family:'Playfair Display',serif;font-weight:400;font-size:26px;color:var(--char);line-height:1.15;}
+  .person-cred{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--gold-deep);margin:6px 0 4px;}
+  .person-role{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mid-gray);margin-bottom:16px;}
+  .person-body{font-size:15px;font-weight:300;line-height:1.8;color:var(--ink);max-width:60ch;}
+  .person-body p{margin-bottom:13px;} .person-body p:last-child{margin-bottom:0;}
+  .person-scope{margin-top:16px;padding:16px 20px;background:var(--cream);border-left:2px solid var(--gold);
+    font-size:14px;line-height:1.72;color:var(--ink);}
+  .person-scope b{font-weight:600;color:var(--char);}
+  @media(max-width:760px){.person{grid-template-columns:1fr;gap:22px;}.person .ph{aspect-ratio:16/10;max-width:340px;}}
+
+  .cteam{margin-top:44px;padding-top:38px;border-top:1px solid var(--light-gray);}
+  .cteam-k{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px;}
+  .cteam h3{font-family:'Playfair Display',serif;font-weight:400;font-size:26px;color:var(--char);line-height:1.22;margin-bottom:14px;max-width:24ch;}
+  .cteam-lead{font-size:16px;font-weight:300;line-height:1.85;color:var(--ink);max-width:64ch;margin-bottom:30px;}
+  .cteam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .cteam-card{background:var(--cream);border-top:2px solid var(--gold);padding:22px 20px 24px;}
+  .cteam-role{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px;}
+  .cteam-card h4{font-family:'Playfair Display',serif;font-weight:400;font-size:17px;color:var(--char);line-height:1.3;margin-bottom:8px;}
+  .cteam-card p{font-size:13.5px;font-weight:300;line-height:1.65;color:var(--ink);}
+  .cteam-note{margin-top:26px;font-size:14.5px;font-weight:300;line-height:1.8;color:var(--ink);max-width:70ch;}
+  @media(max-width:860px){.cteam-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.cteam-grid{grid-template-columns:1fr;}}
+
+  /* STRUCTURE */
+  .structure{background:var(--cream);}
+  .structure-card{background:var(--white);border-top:3px solid var(--gold);padding:38px 40px;max-width:760px;}
+  .structure-card h3{font-size:22px;color:var(--char);margin-bottom:16px;}
+  .structure-card p{font-size:15px;font-weight:300;line-height:1.8;color:var(--ink);margin-bottom:13px;}
+  .structure-card p:last-child{margin-bottom:0;}
+  @media(max-width:620px){.structure-card{padding:28px 22px;}}
+
+  /* ECOSYSTEM STRIP */
+  .eco{background:var(--white);}
+  .eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px;}
+  .eco-card{border:1px solid var(--light-gray);border-top:2px solid var(--gold);padding:26px 24px;background:var(--white);
+    text-decoration:none;display:block;transition:box-shadow .2s ease,transform .2s ease;}
+  a.eco-card:hover{box-shadow:0 4px 20px rgba(27,42,74,.12);transform:translateY(-2px);}
+  .eco-card.current{background:var(--cream);}
+  .eco-num{font-family:'Playfair Display',serif;font-size:32px;color:rgba(126,106,29,.35);line-height:1;margin-bottom:10px;}
+  .eco-k{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px;}
+  .eco-title{font-family:'Playfair Display',serif;font-weight:400;font-size:19px;color:var(--char);margin-bottom:10px;}
+  .eco-body{font-size:13.5px;font-weight:300;line-height:1.7;color:var(--ink);}
+  .eco-badge{display:inline-block;font-size:8px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-top:14px;}
+  .eco-badge.now{background:var(--gold);color:var(--char-deep);}
+  .eco-badge.soon{background:transparent;border:1px solid var(--gold-deep);color:var(--gold-deep);}
+  @media(max-width:760px){.eco-grid{grid-template-columns:1fr;}}
+
+  /* VISIT US */
+  .visitus{background:var(--char-mid);color:var(--white);}
+  .visitus .vu-k{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:14px;}
+  .vu-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+  .vu-grid h3{font-family:'Playfair Display',serif;font-weight:400;font-size:26px;color:var(--white);margin-bottom:12px;}
+  .vu-addr{font-size:17px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);}
+  .vu-addr a{color:var(--gold-lift);text-decoration:none;}
+  .vu-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;font-size:14.5px;
+    color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.12);}
+  .vu-row:last-child{border-bottom:0;}
+  .vu-row .vd{color:rgba(255,255,255,.7);}
+  @media(max-width:760px){.vu-grid{grid-template-columns:1fr;gap:26px;}}
+
+  /* FAITH / CLOSE */
+  .faith{background:var(--char-deep);color:var(--white);text-align:center;position:relative;overflow:hidden;}
+  .faith::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(173,146,39,.08),transparent 70%);}
+  .faith-in{position:relative;z-index:2;}
+  .faith h2{font-size:34px;color:var(--white);margin-bottom:10px;}
+  .faith-sub{font-size:14px;letter-spacing:.06em;color:rgba(255,255,255,.7);margin-bottom:28px;}
+  .faith-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .faith-cta .btn{padding:16px 34px;font-size:13px;}
+  .faith-verse{font-family:'Playfair Display',serif;font-size:19px;font-style:italic;color:rgba(255,255,255,.7);
+    line-height:1.5;max-width:34ch;margin:44px auto 8px;padding-top:38px;border-top:1px solid rgba(255,255,255,.10);}
+  .faith-ref{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:0;}
+
+  footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:32px 0 38px;}
+  .foot-in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px 32px;}
+  .foot-mark{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.62);}
+  .foot-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:12px;letter-spacing:.08em;}
+  .foot-links a:hover{color:var(--gold-lift);}
+  .foot-fine{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;font-weight:400;line-height:1.85;color:rgba(255,255,255,.62);max-width:96ch;}
+  .foot-fine p + p{margin-top:8px;}
+
+  /* STICKY MOBILE ACTION BAR — mirrors the landing page */
+  .mobar{display:none;}
+  @media(max-width:720px){
+    .mobar{display:grid;grid-template-columns:.85fr .85fr 1.5fr;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      border-top:1px solid rgba(255,255,255,.14);}
+    .mobar a{display:block;text-align:center;padding:15px 6px;text-decoration:none;
+      font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .mobar .m-call,.mobar .m-text{background:var(--char-deep);color:var(--white);border-right:1px solid rgba(255,255,255,.14);}
+    .mobar .m-book{background:var(--gold);color:var(--char-deep);}
+    body{padding-bottom:52px;}
+  }
+  @media(prefers-reduced-motion:reduce){a.eco-card{transition:none;}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "PLACEHOLDER_ABOUT_URL",
+  "name": "About & Our Team | FINISH Performance Health",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://finishperformancehealth.com#organization",
+    "name": "FINISH Performance Health",
+    "url": "https://finishperformancehealth.com",
+    "logo": "PLACEHOLDER_OG_IMAGE_URL",
+    "telephone": "+1-706-224-9951",
+    "description": "An independent, direct-pay health organization in Athens, Georgia built on three pillars: DirectOrtho+ precision musculoskeletal medicine, FINISH Healthspan, and FINISH Longevity.",
+    "address": {"@type":"PostalAddress","streetAddress":"394 S. Milledge Avenue, Suites 101 &amp; 102","addressLocality":"Athens","addressRegion":"GA","postalCode":"30605","addressCountry":"US"},
+    "areaServed": [{"@type":"City","name":"Athens"},{"@type":"State","name":"Georgia"}],
+    "subOrganization": {"@type":"MedicalBusiness","@id":"PLACEHOLDER_CANONICAL_URL#practice","name":"FINISH DirectOrtho+","url":"PLACEHOLDER_CANONICAL_URL"},
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Kelly Ward",
+        "honorificSuffix": "PA-C",
+        "jobTitle": "Co-Founder and Clinical Director",
+        "worksFor": {"@id":"https://finishperformancehealth.com#organization"},
+        "alumniOf": [
+          {"@type":"CollegeOrUniversity","name":"University of Georgia"},
+          {"@type":"CollegeOrUniversity","name":"Emory University"}
+        ],
+        "description": "Physician assistant with 28 years in orthopedics and sports medicine in Athens, Georgia, including 26 years supporting University of Georgia Athletics. Began practicing as an orthopedic PA in 1998."
+      },
+      {
+        "@type": "Person",
+        "name": "Matthew Farmer",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "MD",
+        "jobTitle": "Co-Founder and Medical Director",
+        "worksFor": {"@id":"https://finishperformancehealth.com#organization"},
+        "alumniOf": [
+          {"@type":"CollegeOrUniversity","name":"University of Georgia"},
+          {"@type":"CollegeOrUniversity","name":"Medical College of Georgia"}
+        ],
+        "description": "Board-certified internal medicine physician with 14 years of experience, serving as Medical Director and providing medical oversight across the FINISH ecosystem."
+      },
+      {
+        "@type": "Person",
+        "name": "Christopher Gaunder",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "MD",
+        "jobTitle": "Co-Founder and Director, FINISH Longevity",
+        "worksFor": {"@id":"https://finishperformancehealth.com#organization"},
+        "alumniOf": [
+          {"@type":"CollegeOrUniversity","name":"University of Georgia"},
+          {"@type":"CollegeOrUniversity","name":"Mercer University"}
+        ],
+        "description": "Board-certified orthopedic surgeon and co-founder, bringing orthopedic surgical perspective to the founding table and directing the FINISH Longevity pillar. He does not see or treat patients through DirectOrtho+ and provides no orthopedic clinical care, surgical services or patient consultation there; his surgical practice is separate and independent of FINISH Performance Health."
+      }
+    ]
+  }
+}
+</script>
+
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+<nav class="nav" aria-label="Primary">
+  <div class="nav-in">
+    <a href="PLACEHOLDER_FINISH_HOME_URL" class="nav-logo fi-lockup" style="font-size:34px;color:var(--cream);" aria-label="FINISH Performance Health — Athens, Georgia"><svg class="fi-logo" viewBox="7.6 9.0 720.7 203.2" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FINISH" focusable="false"><path fill="currentColor" d="M 647.855469 174.5 L 659.148438 174.5 L 659.148438 129.414062 L 716.972656 129.414062 L 716.972656 174.5 L 728.285156 174.5 L 728.285156 74.320312 L 716.972656 74.320312 L 716.972656 118.824219 L 659.148438 118.824219 L 659.148438 74.320312 L 647.855469 74.320312 Z M 573.027344 175.929688 C 592.921875 175.929688 607.234375 164.773438 607.234375 147.59375 L 607.234375 147.316406 C 607.234375 132 596.929688 123.84375 574.605469 118.96875 C 552.566406 114.25 547.40625 108.953125 547.40625 99.511719 L 547.40625 99.226562 C 547.40625 90.199219 555.714844 83.042969 568.734375 83.042969 C 579.042969 83.042969 588.335938 86.347656 597.644531 93.921875 L 604.226562 85.191406 C 594.066406 77.042969 583.617188 72.890625 569.019531 72.890625 C 549.992188 72.890625 536.109375 84.476562 536.109375 100.222656 L 536.109375 100.507812 C 536.109375 116.964844 546.699219 124.40625 569.746094 129.414062 C 590.773438 133.851562 595.78125 139.148438 595.78125 148.449219 L 595.78125 148.734375 C 595.78125 158.617188 586.917969 165.765625 573.449219 165.765625 C 559.578125 165.765625 549.558594 161.046875 539.121094 151.605469 L 532.101562 159.90625 C 544.128906 170.636719 557.144531 175.929688 573.027344 175.929688 M 480.46875 174.5 L 491.765625 174.5 L 491.765625 74.320312 L 480.46875 74.320312 Z M 348.8125 174.5 L 359.847656 174.5 L 359.847656 92.347656 L 424.535156 174.5 L 433.550781 174.5 L 433.550781 74.320312 L 422.523438 74.320312 L 422.523438 154.605469 L 359.421875 74.320312 L 348.8125 74.320312 Z M 290.605469 174.5 L 301.910156 174.5 L 301.910156 74.320312 L 290.605469 74.320312 Z M 178.144531 174.5 L 189.449219 174.5 L 189.449219 130.851562 L 243.6875 130.851562 L 243.6875 120.542969 L 189.449219 120.542969 L 189.449219 84.773438 L 250.125 84.773438 L 250.125 74.320312 L 178.144531 74.320312 Z M 178.144531 174.5"/><path fill="#B19000" d="M 39.4375 30.449219 C 38.925781 31.113281 38.417969 31.75 37.917969 32.378906 C 31.054688 41.40625 24.210938 50.476562 17.351562 59.546875 C 11.707031 66.886719 7.613281 72.609375 10.875 83.0625 C 11.980469 86.699219 14.089844 89.976562 17.105469 92.410156 C 23.429688 97.503906 33.300781 96.972656 40.738281 91.703125 C 60.253906 77.761719 48.210938 48.078125 39.4375 30.449219"/><path fill="#E1B600" d="M 71.652344 142.269531 C 64.691406 148.429688 62.203125 148.449219 62.429688 158.378906 C 62.597656 165.96875 62.992188 173.199219 63.605469 181.191406 C 81.738281 172.875 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.847656 114.136719 129.925781 106.664062 129.0625 99.136719 C 109.984375 113.492188 90.835938 127.859375 71.652344 142.269531"/><path fill="#E1B600" d="M 33.316406 159.710938 C 30.320312 162.367188 27.6875 165.484375 25.882812 169.222656 C 25.566406 168.367188 25.253906 167.507812 24.945312 166.617188 C 20.027344 153.34375 22.398438 140.09375 29.84375 130.179688 C 45.191406 109.710938 60.441406 89.332031 75.621094 69.09375 C 90.730469 48.960938 105.855469 28.949219 120.800781 8.980469 C 122.316406 21.941406 123.851562 34.902344 125.453125 47.890625 C 126.367188 55.480469 126.167969 62.898438 124.910156 69.652344 C 123.332031 76.507812 120.351562 82.101562 116.003906 85.898438 C 88.574219 110.320312 60.945312 134.867188 33.316406 159.710938"/><path fill="#B19000" d="M 35.105469 169.734375 C 32.152344 171.960938 29.65625 176.210938 31.523438 181.605469 C 36.644531 196.542969 42.210938 203.78125 55.96875 212.132812 C 54.136719 194.046875 52.339844 176.046875 50.597656 158.101562 C 45.445312 162.007812 40.253906 165.890625 35.105469 169.734375"/><path fill="#B19000" d="M 121.679688 116.492188 C 110.710938 140.425781 94.535156 159.628906 77.300781 169.09375 L 63.261719 176.792969 C 63.378906 178.257812 63.496094 179.71875 63.605469 181.191406 C 81.738281 172.878906 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.894531 114.496094 130.003906 107.355469 129.1875 100.1875 C 126.664062 105.625 124.175781 111.058594 121.679688 116.492188 M 76.628906 98.84375 C 58.789062 117.003906 40.898438 135.234375 22.9375 153.488281 L 22.398438 154.042969 C 22.054688 145.242188 24.769531 136.933594 29.84375 130.179688 L 75.621094 69.09375 C 89.8125 50.171875 104.023438 31.382812 118.085938 12.609375 L 112.847656 40.28125 C 109.90625 58.191406 102.351562 72.707031 90.316406 84.992188 C 85.71875 89.601562 81.191406 94.207031 76.628906 98.84375 M 40.738281 91.703125 C 60.253906 77.773438 48.210938 48.078125 39.4375 30.449219 L 37.917969 32.378906 C 36.730469 33.953125 35.535156 35.511719 34.34375 37.078125 C 33.535156 47.136719 32.726562 57.230469 31.972656 67.328125 C 31.863281 68.726562 31.738281 70.039062 31.59375 71.414062 C 30.535156 80.402344 28.433594 88.648438 25.363281 95.816406 C 30.464844 96.445312 36.085938 95.007812 40.738281 91.703125"/></svg><span class="fi-descriptor" style="color:var(--gold-lift);">Performance Health</span></a>
+    <div class="nav-cta">
+      <a class="nav-link" href="PLACEHOLDER_FINISH_HOME_URL#pillars">The Three Pillars</a>
+      <a class="nav-link" href="#team" aria-current="page">About &amp; Our Team</a>
+      <a class="nav-link" href="PLACEHOLDER_DIRECTORTHO_URL">DirectOrtho+</a>
+      <a class="btn btn-ghost-gold" href="tel:+17062249951">706-224-9951</a>
+      <a class="btn btn-gold" href="PLACEHOLDER_BASELINE_URL">Start With a Baseline</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <p class="eyebrow">About · FINISH Performance Health</p>
+    <h1 id="hero-h">Built by clinicians who wanted to deliver <em>the care they'd want for their own families.</em></h1>
+    <p class="hero-lead">FINISH Performance Health brings precision musculoskeletal medicine, orthopedic sports medicine, performance and longevity care together under one roof — delivered with time, transparency, and intention by a team that has spent decades caring for this community.</p>
+    <p class="hero-micro"><b>Independent &amp; direct-pay</b> · Athens, Georgia · 28 years in orthopedics · Three University of Georgia co-founders</p>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section class="origin" aria-labelledby="origin-h">
+  <div class="wrap origin-grid">
+    <div>
+      <p class="sec-eyebrow">Our Story</p>
+      <h2 class="sec-title" id="origin-h">A vision that began on a canyon trail.</h2>
+      <div class="gold-rule"></div>
+      <div class="lead">
+        <p class="kicker">The idea for FINISH didn't start in a boardroom. It started on a hike across the Grand Canyon.</p>
+
+        <!-- ================= CANYON DETAIL =================
+             One concrete moment belongs here, in Kelly's own words: the mile
+             marker, the person on the trail, the sentence that landed. Two
+             sentences is plenty. This is the only paragraph on the entire site
+             that no competitor can copy, so it is worth getting right. The page
+             reads correctly without it; it is simply better with it.
+             ================================================= -->
+
+        <p>What became clear on that trail was a practice built around keeping people moving — confidently and independently, for the whole of their lives, not just the length of a visit. Medicine measured by how well a person moves.</p>
+        <p>That vision became a clinic. The clinic became an ecosystem — precision musculoskeletal medicine, sports medicine and performance, and longevity, built as one continuous strategy for how a person moves from injury to recovery to lasting healthspan.</p>
+      </div>
+    </div>
+    <figure class="ph">
+      <img src="images/origin-trail.jpg" width="1000" height="1250" loading="lazy" decoding="async"
+           alt="The Grand Canyon trail where the idea for FINISH Performance Health began.">
+      <span class="ph-label">Photo · Kelly on the trail, or the clinic space</span>
+    </figure>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise" aria-labelledby="promise-h">
+  <div class="wrap">
+    <p class="sec-eyebrow">What We Stand For</p>
+    <h2 class="promise-line" id="promise-h">"The patient is always the most important person in the room."</h2>
+    <p class="promise-triad">Complete <span aria-hidden="true">·</span> Intentional <span aria-hidden="true">·</span> Patient-first</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="team-intro">
+      <p class="sec-eyebrow">Our Team</p>
+      <h2 class="sec-title" id="team-h">Three co-founders. One shared conviction.</h2>
+      <p><span class="partner-badge">Ward · Farmer · Gaunder — Co-Founders</span></p>
+      <p class="lead" style="max-width:60ch;margin:0 auto;text-align:center;">Three University of Georgia graduates and co-founders, home in Athens — bound by a shared conviction about how orthopedic and sports medicine care should be delivered, and by decades of history that runs deeper than a business. Each leads the discipline he knows best, which is what makes this a team rather than a practice with one name on the door.</p>
+    </div>
+
+    <!-- KELLY WARD -->
+    <div class="person">
+      <figure class="ph">
+        <img src="images/kelly-ward.jpg" width="800" height="1000" loading="lazy" decoding="async"
+             alt="Kelly Ward, MMSc, PA-C, co-founder and Clinical Director of FINISH Performance Health.">
+        <span class="ph-label">Photo · Kelly Ward, MMSc, PA-C</span>
+      </figure>
+      <div>
+        <h3 class="person-name">Kelly Ward, MMSc, PA-C</h3>
+        <p class="person-cred">Co-Founder &amp; Clinical Director</p>
+        <p class="person-role">Precision Musculoskeletal Medicine · Athens</p>
+        <div class="person-body">
+          <p>Kelly Ward is a co-founder and the full-time clinical leader of FINISH Performance Health, with 28 years in orthopedics and sports medicine in Athens. The same clinician performs your exam, reads your imaging, builds your plan, and follows your case. A University of Georgia graduate, he completed his physician assistant training at Emory University, began practicing as an orthopedic PA in 1998, and served alongside UGA Athletics for 26 years — working with athletes at every level from youth to elite competition.</p>
+          <p>One of those athletes was Chris Gaunder. Kelly was his orthopedic PA-C during his playing days at Georgia, followed his career through medical school, residency, and a decade of military service, and ultimately recruited him home to Athens as a co-founder of this practice. It is the kind of relationship FINISH is built on.</p>
+          <p>His conviction is simple and hard-won: most musculoskeletal problems never need surgery — they need time, an accurate diagnosis, and the right conservative-first plan. FINISH is the practice he built to deliver exactly that.</p>
+          <!-- TO DO before launch: reconcile against the live bio at
+               finishperformancehealth.com/our-team/kelly-ward-pa and add board
+               certification. Add faith or personal detail here if wanted. -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MATTHEW FARMER -->
+    <div class="person">
+      <figure class="ph">
+        <img src="images/matthew-farmer.jpg" width="800" height="1000" loading="lazy" decoding="async"
+             alt="Dr. Matthew Farmer, MD, co-founder and Medical Director of FINISH Performance Health.">
+        <span class="ph-label">Photo · Matthew Farmer, MD</span>
+      </figure>
+      <div>
+        <h3 class="person-name">Matthew Farmer, MD</h3>
+        <p class="person-cred">Co-Founder &amp; Medical Director</p>
+        <p class="person-role">Board-Certified Internal Medicine</p>
+        <div class="person-body">
+          <p>Dr. Matthew Farmer serves as Medical Director of FINISH Performance Health, bringing 14 years of experience in internal medicine to the practice. A University of Georgia graduate, he earned his medical degree at the Medical College of Georgia.</p>
+          <p>He provides medical oversight across the FINISH ecosystem. His presence is what lets a musculoskeletal evaluation here sit inside a complete picture of your health — not apart from it — and it anchors the whole-person, conservative-first philosophy at the center of everything FINISH does.</p>
+          <p>As Medical Director, Dr. Farmer provides the clinical governance that holds FINISH to a standard beyond the minimum: the same standard the team would demand for their own care.</p>
+          <!-- Board certification confirmed against Brand Book V4.4.
+               Still worth a final check against the live bio at
+               finishperformancehealth.com/our-team/matthew-farmer-md -->
+        </div>
+      </div>
+    </div>
+
+    <!-- CHRISTOPHER GAUNDER -->
+    <div class="person">
+      <figure class="ph">
+        <img src="images/christopher-gaunder.jpg" width="800" height="1000" loading="lazy" decoding="async"
+             alt="Dr. Christopher Gaunder, MD, co-founder and Director of FINISH Longevity.">
+        <span class="ph-label">Photo · Christopher Gaunder, MD</span>
+      </figure>
+      <div>
+        <h3 class="person-name">Chris Gaunder, MD</h3>
+        <p class="person-cred">Co-Founder &amp; Director, FINISH Longevity</p>
+        <p class="person-role">Board-Certified Orthopedic Surgery</p>
+        <div class="person-body">
+          <p>A co-founder of FINISH Performance Health, Dr. Chris Gaunder brings orthopedic surgical perspective to the founding table — which means the conservative-first standard here was set with a surgeon in the room. He is board certified in orthopedic surgery and a proud University of Georgia alumnus — a Biology major who lettered in football on the 2005 SEC Championship team before earning his medical degree at Mercer University and completing orthopedic surgery residency at Brooke Army Medical Center. He served ten years as a Major in the United States Air Force.</p>
+          <p>His path to FINISH runs back to those same playing days at Georgia, and to the clinician who treated him there. Decades later, that relationship brought him home to Athens as a co-founder of this organization, where he also directs the FINISH Longevity pillar.</p>
+          <p class="person-scope"><b>Dr. Gaunder's surgical practice is separate and independent of FINISH Performance Health. He does not see or treat patients through DirectOrtho+, and provides no orthopedic clinical care, surgical services or patient consultation here.</b> His contribution is at the founding and strategic level, including direction of the FINISH Longevity pillar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cteam">
+      <p class="cteam-k">The Clinical Team</p>
+      <h3>The people you'll actually see.</h3>
+      <p class="cteam-lead">Beyond the founding partners, FINISH is delivered by a small, coordinated team working the same case in the same building. It is what lets a patient be evaluated, imaged, treated and started in therapy on a single afternoon rather than across three appointments and three weeks — and what lets the same file follow that person into training, nutrition and long-term measurement without a second intake.</p>
+      <!-- TO DO before launch: replace these ten role cards with named people,
+           credentials and photos, or remove the block. A named team is worth
+           considerably more than ten described roles. Credential lines are
+           placeholders and must be checked against each person's actual
+           licensure before publication — RD/RDN, CSCS and PT, DPT are not
+           interchangeable. The women's health role is a physician role; its
+           card must carry MD and the name must match the medical staff roster
+           and the disclosures block below. -->
+      <div class="cteam-grid">
+        <div class="cteam-card">
+          <p class="cteam-role">Physical Therapy</p>
+          <h4>Physical Therapist, PT, DPT</h4>
+          <p>Full-scope therapist, down the hall, speaking directly with the clinician on your case.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Physical Therapy</p>
+          <h4>Physical Therapist, PT, DPT</h4>
+          <p>Same-hour evaluation when the exam calls for it. No faxed referral, no lost week.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Athletic Training</p>
+          <h4>Athletic Trainer, ATC</h4>
+          <p>Extends the work between therapy sessions and runs the return-to-activity progression.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Strength &amp; Conditioning</p>
+          <h4>Strength &amp; Conditioning Coach, CSCS</h4>
+          <p>Writes your training from your movement screen, VO&#8322; max and lactate threshold rather than from a template, and revises it on the cadence your tier sets.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Strength &amp; Conditioning</p>
+          <h4>Strength &amp; Conditioning Coach, CSCS</h4>
+          <p>Coaches the sessions themselves and adjusts load in the room — including backing off when the therapist on your case says the joint is not ready.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Nutrition</p>
+          <h4>Registered Dietitian &amp; Nutrition Coach, RD</h4>
+          <p>Turns your resting metabolic rate, body composition and glucose data into food you will actually eat, then revises it as the numbers move.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Women's Health</p>
+          <h4>Women's Health Consultant, MD</h4>
+          <p>Physician-directed care through perimenopause and after, so bone, lean mass and metabolic change are tracked through the transition rather than explained afterward.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Imaging</p>
+          <h4>Radiologic Technologist</h4>
+          <p>Digital X-ray performed on site, reviewed in the room by the clinician who examined you.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Care Navigation</p>
+          <h4>Care Navigator</h4>
+          <p>Checks in at 48 to 72 hours after every visit and makes sure nothing falls through.</p>
+        </div>
+        <div class="cteam-card">
+          <p class="cteam-role">Clinical Operations</p>
+          <h4>Clinical Manager</h4>
+          <p>First voice on the member text line; escalates to the clinician by protocol.</p>
+        </div>
+      </div>
+      <p class="cteam-note">When a case calls for surgical input, we have direct working relationships with orthopedic surgeons throughout Athens — a phone call, not a referral queue. Our recommendation is based on whether surgery is right for you, not on whether you choose it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="structure" aria-labelledby="struct-h">
+  <div class="wrap">
+    <p class="sec-eyebrow">How We're Built</p>
+    <h2 class="sec-title" id="struct-h">Independent by design.</h2>
+    <div class="gold-rule"></div>
+    <div class="structure-card">
+      <h3>A practice accountable to the patient in the room.</h3>
+      <p>FINISH DirectOrtho+ is an independent, direct-pay <strong>non-surgical</strong> orthopedic and sports medicine practice. No surgical services are performed by the practice. Care is delivered by a physician-supervised clinical team led by Kelly Ward, MMSc, PA-C, consistent with Georgia requirements, with Dr. Matthew Farmer serving as Medical Director. Dr. Christopher Gaunder's role is limited to direction of the FINISH Longevity pillar and strategic advisory; he does not participate in orthopedic patient care at DirectOrtho+.</p>
+      <p>This structure is deliberate. We own no MRI scanner, no CT scanner, and no surgery center, so nothing downstream of your visit changes what we earn. We do not bill insurance, so no coverage determination sits between a clinician and a plan. When cost and incentive are settled before you arrive, the only question left in the room is what your body actually needs — and that is what we get to spend the visit on.</p>
+      <p>It is the difference between a visit that ends in a <strong>disposition</strong> — where you go next — and one that ends in a <strong>decision</strong>: what is wrong, what it needs, and what happens now. That is medicine practiced the way it was meant to be: unhurried, transparent, and centered on the patient in the room.</p>
+      <p style="margin-top:20px;"><a class="btn btn-ghost-dark" href="PLACEHOLDER_LANDING_URL#services">See every service and every price</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="eco" aria-labelledby="eco-h">
+  <div class="wrap">
+    <p class="sec-eyebrow">The FINISH Ecosystem</p>
+    <h2 class="sec-title" id="eco-h">Three pillars. One continuous strategy.</h2>
+    <div class="gold-rule"></div>
+    <p class="lead" style="max-width:60ch;">Injury, recovery, performance, and long-term healthspan, built as a single strategy rather than four disconnected services. Most people begin at the first pillar.</p>
+    <div class="eco-grid">
+      <a class="eco-card" href="PLACEHOLDER_LANDING_URL">
+        <div class="eco-num" aria-hidden="true">I</div>
+        <p class="eco-k">Pillar One</p>
+        <h3 class="eco-title">DirectOrtho+</h3>
+        <p class="eco-body">Conservative-first, non-surgical orthopedic and sports medicine. Same-day access, published pricing, coordinated escalation when needed.</p>
+        <span class="eco-badge now">Open Now</span>
+      </a>
+      <a class="eco-card" href="PLACEHOLDER_HEALTHSPAN_URL">
+        <div class="eco-num" aria-hidden="true">II</div>
+        <p class="eco-k">Pillar Two</p>
+        <h3 class="eco-title">FINISH Healthspan</h3>
+        <p class="eco-body">Healthspan optimization and performance — DEXA, VO₂ max, metabolic and strength testing, nutrition, and medical oversight. Where recovery becomes resilience.</p>
+        <span class="eco-badge now">Open Now</span>
+      </a>
+      <div class="eco-card current">
+        <div class="eco-num" aria-hidden="true">III</div>
+        <p class="eco-k">Pillar Three</p>
+        <h3 class="eco-title">FINISH Longevity</h3>
+        <p class="eco-body">Longevity and Wellness. Designed to watch the long arc of health across decades rather than visits, on the musculoskeletal foundation that makes any of it usable. Not open, not accepting patients, and no service or price is offered for it yet.</p>
+        <span class="eco-badge soon">In Development</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT US -->
+<section class="visitus" aria-labelledby="visit-us-h">
+  <div class="wrap">
+    <p class="vu-k">Visit Us</p>
+    <h2 class="sec-title" id="visit-us-h" style="color:var(--white);">Athens, Georgia.</h2>
+    <div class="gold-rule"></div>
+    <div class="vu-grid">
+      <div>
+        <h3>394 S. Milledge Avenue, Suites 101 &amp; 102</h3>
+        <p class="vu-addr">Athens, Georgia 30605<br>
+          <a href="tel:+17062249951">706-224-9951</a> · <a href="sms:+17062249951">text us</a>
+        </p>
+      </div>
+      <div>
+        <div class="vu-row"><span>Monday – Thursday</span><span class="vd">8:00 – 4:30</span></div>
+        <div class="vu-row"><span>Friday</span><span class="vd">8:00 – 2:00</span></div>
+        <div class="vu-row"><span>Saturday injury window</span><span class="vd">By appointment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAITH / CLOSE -->
+<section class="faith" aria-labelledby="close-h">
+  <div class="wrap faith-in">
+    <h2 id="close-h">Let's Begin to FINISH.</h2>
+    <p class="faith-sub">Non-Surgical Orthopedic &amp; Sports Medicine · Athens, Georgia</p>
+    <div class="faith-cta">
+      <a class="btn btn-gold" href="PLACEHOLDER_BOOKING_URL">Book a Visit</a>
+      <a class="btn btn-ghost" href="tel:+17062249951">Call · 706-224-9951</a>
+      <a class="btn btn-ghost" href="sms:+17062249951">Text Us</a>
+    </div>
+    <p class="faith-verse">"Not to us, Lord, not to us — but to Your name be the glory."</p>
+    <p class="faith-ref">Psalm 115:1</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <span class="foot-mark" style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:9px;"><svg class="fi-logo" style="height:26px;color:var(--cream);" viewBox="7.6 9.0 720.7 203.2" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FINISH" focusable="false"><path fill="currentColor" d="M 647.855469 174.5 L 659.148438 174.5 L 659.148438 129.414062 L 716.972656 129.414062 L 716.972656 174.5 L 728.285156 174.5 L 728.285156 74.320312 L 716.972656 74.320312 L 716.972656 118.824219 L 659.148438 118.824219 L 659.148438 74.320312 L 647.855469 74.320312 Z M 573.027344 175.929688 C 592.921875 175.929688 607.234375 164.773438 607.234375 147.59375 L 607.234375 147.316406 C 607.234375 132 596.929688 123.84375 574.605469 118.96875 C 552.566406 114.25 547.40625 108.953125 547.40625 99.511719 L 547.40625 99.226562 C 547.40625 90.199219 555.714844 83.042969 568.734375 83.042969 C 579.042969 83.042969 588.335938 86.347656 597.644531 93.921875 L 604.226562 85.191406 C 594.066406 77.042969 583.617188 72.890625 569.019531 72.890625 C 549.992188 72.890625 536.109375 84.476562 536.109375 100.222656 L 536.109375 100.507812 C 536.109375 116.964844 546.699219 124.40625 569.746094 129.414062 C 590.773438 133.851562 595.78125 139.148438 595.78125 148.449219 L 595.78125 148.734375 C 595.78125 158.617188 586.917969 165.765625 573.449219 165.765625 C 559.578125 165.765625 549.558594 161.046875 539.121094 151.605469 L 532.101562 159.90625 C 544.128906 170.636719 557.144531 175.929688 573.027344 175.929688 M 480.46875 174.5 L 491.765625 174.5 L 491.765625 74.320312 L 480.46875 74.320312 Z M 348.8125 174.5 L 359.847656 174.5 L 359.847656 92.347656 L 424.535156 174.5 L 433.550781 174.5 L 433.550781 74.320312 L 422.523438 74.320312 L 422.523438 154.605469 L 359.421875 74.320312 L 348.8125 74.320312 Z M 290.605469 174.5 L 301.910156 174.5 L 301.910156 74.320312 L 290.605469 74.320312 Z M 178.144531 174.5 L 189.449219 174.5 L 189.449219 130.851562 L 243.6875 130.851562 L 243.6875 120.542969 L 189.449219 120.542969 L 189.449219 84.773438 L 250.125 84.773438 L 250.125 74.320312 L 178.144531 74.320312 Z M 178.144531 174.5"/><path fill="#B19000" d="M 39.4375 30.449219 C 38.925781 31.113281 38.417969 31.75 37.917969 32.378906 C 31.054688 41.40625 24.210938 50.476562 17.351562 59.546875 C 11.707031 66.886719 7.613281 72.609375 10.875 83.0625 C 11.980469 86.699219 14.089844 89.976562 17.105469 92.410156 C 23.429688 97.503906 33.300781 96.972656 40.738281 91.703125 C 60.253906 77.761719 48.210938 48.078125 39.4375 30.449219"/><path fill="#E1B600" d="M 71.652344 142.269531 C 64.691406 148.429688 62.203125 148.449219 62.429688 158.378906 C 62.597656 165.96875 62.992188 173.199219 63.605469 181.191406 C 81.738281 172.875 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.847656 114.136719 129.925781 106.664062 129.0625 99.136719 C 109.984375 113.492188 90.835938 127.859375 71.652344 142.269531"/><path fill="#E1B600" d="M 33.316406 159.710938 C 30.320312 162.367188 27.6875 165.484375 25.882812 169.222656 C 25.566406 168.367188 25.253906 167.507812 24.945312 166.617188 C 20.027344 153.34375 22.398438 140.09375 29.84375 130.179688 C 45.191406 109.710938 60.441406 89.332031 75.621094 69.09375 C 90.730469 48.960938 105.855469 28.949219 120.800781 8.980469 C 122.316406 21.941406 123.851562 34.902344 125.453125 47.890625 C 126.367188 55.480469 126.167969 62.898438 124.910156 69.652344 C 123.332031 76.507812 120.351562 82.101562 116.003906 85.898438 C 88.574219 110.320312 60.945312 134.867188 33.316406 159.710938"/><path fill="#B19000" d="M 35.105469 169.734375 C 32.152344 171.960938 29.65625 176.210938 31.523438 181.605469 C 36.644531 196.542969 42.210938 203.78125 55.96875 212.132812 C 54.136719 194.046875 52.339844 176.046875 50.597656 158.101562 C 45.445312 162.007812 40.253906 165.890625 35.105469 169.734375"/><path fill="#B19000" d="M 121.679688 116.492188 C 110.710938 140.425781 94.535156 159.628906 77.300781 169.09375 L 63.261719 176.792969 C 63.378906 178.257812 63.496094 179.71875 63.605469 181.191406 C 81.738281 172.878906 99.835938 164.613281 117.960938 156.261719 C 127.742188 151.769531 132.617188 139.269531 131.738281 121.628906 C 130.894531 114.496094 130.003906 107.355469 129.1875 100.1875 C 126.664062 105.625 124.175781 111.058594 121.679688 116.492188 M 76.628906 98.84375 C 58.789062 117.003906 40.898438 135.234375 22.9375 153.488281 L 22.398438 154.042969 C 22.054688 145.242188 24.769531 136.933594 29.84375 130.179688 L 75.621094 69.09375 C 89.8125 50.171875 104.023438 31.382812 118.085938 12.609375 L 112.847656 40.28125 C 109.90625 58.191406 102.351562 72.707031 90.316406 84.992188 C 85.71875 89.601562 81.191406 94.207031 76.628906 98.84375 M 40.738281 91.703125 C 60.253906 77.773438 48.210938 48.078125 39.4375 30.449219 L 37.917969 32.378906 C 36.730469 33.953125 35.535156 35.511719 34.34375 37.078125 C 33.535156 47.136719 32.726562 57.230469 31.972656 67.328125 C 31.863281 68.726562 31.738281 70.039062 31.59375 71.414062 C 30.535156 80.402344 28.433594 88.648438 25.363281 95.816406 C 30.464844 96.445312 36.085938 95.007812 40.738281 91.703125"/></svg><span style="letter-spacing:.16em;color:rgba(255,255,255,.58);">394 S. Milledge Ave, Suites 101 &amp; 102 · Athens GA 30605</span></span>
+      <span class="foot-links"><a href="https://finishperformancehealth.com">finishperformancehealth.com</a> · <a href="tel:+17062249951">706-224-9951</a> · <a href="sms:+17062249951">Text us</a> · <a href="PLACEHOLDER_LANDING_URL#services">Services &amp; Pricing</a></span>
+    </div>
+    <div class="foot-fine">
+      <p>FINISH DirectOrtho+ is an independent, direct-pay, non-surgical orthopedic and sports medicine practice and does not bill insurance. No surgical services are performed by the practice. Care is provided by Kelly Ward, MMSc, PA-C, a licensed physician assistant, under physician supervision as registered with the Georgia Composite Medical Board.</p>
+      <p>Dr. Christopher Gaunder does not provide orthopedic clinical care, surgical services or patient consultation through DirectOrtho+; his surgical practice is separate and independent of FINISH Performance Health. His contribution is at the founding and strategic level, including direction of the FINISH Longevity pillar.</p>
+      <p>This page is general information, not medical advice, and does not create a patient relationship. <strong>If you are experiencing a medical emergency, call 911.</strong></p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE ACTION BAR
+     Mirrors the landing page. If SMS materially outperforms calls once you have
+     analytics, delete the .m-call link and set .mobar to
+     grid-template-columns:1fr 1.4fr. -->
+<div class="mobar">
+  <a class="m-call" href="tel:+17062249951">Call</a>
+  <a class="m-text" href="sms:+17062249951">Text</a>
+  <a class="m-book" href="PLACEHOLDER_BOOKING_URL">Book a Visit</a>
+</div>
+
+<script>
+/* ---------------------------------------------------------------------------
+   Launch safety net — identical behaviour to the landing page.
+
+   1. Booking links fall back to the phone number while the placeholder is
+      unreplaced, so the primary CTA can never 404.
+   2. Each photograph hides itself on error, leaving the labelled placeholder
+      panel beneath it. The layout does not shift and no broken-image icon
+      ever renders.
+   --------------------------------------------------------------------------- */
+(function () {
+  var TOKEN = 'PLACEHOLDER' + '_BOOKING_URL';
+  var FALLBACK = 'tel:+17062249951';
+
+  var dead = document.querySelectorAll('a[href="' + TOKEN + '"]');
+  if (dead.length) {
+    for (var i = 0; i < dead.length; i++) {
+      dead[i].setAttribute('href', FALLBACK);
+      dead[i].setAttribute('title', 'Call 706-224-9951 to book');
+    }
+    console.warn(
+      '[FINISH about] ' + dead.length + ' booking link(s) still point at ' + TOKEN +
+      '. They have been repointed to the phone number so nothing 404s. ' +
+      'Replace the placeholder with the real scheduling URL before launch.'
+    );
+  }
+
+  var imgs = document.querySelectorAll('.ph img');
+  for (var j = 0; j < imgs.length; j++) {
+    imgs[j].addEventListener('error', function () { this.remove(); });
+  }
+})();
+</script>
+
+</body>
+</html>
