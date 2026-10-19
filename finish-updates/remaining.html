@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FINISH Remaining Items</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F4F5F2; --surface:#FFFFFF; --ink:#18212A; --muted:#5A6570; --line:#DADFE2; --soft:#EBEEEA;
+  --gold:#8E6E12; --done:#1E6A4E; --done-bg:#E3F0EA; --fin:#9A540F; --fin-bg:#F7EADB; --dev:#2D4C8A; --dev-bg:#E2E8F4; --dec:#7A3B6E; --dec-bg:#F3E4EF;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#12171C; --surface:#1A2128; --ink:#E7EBEE; --muted:#9AA6B0; --line:#2C363F; --soft:#222A32;
+  --gold:#D3B04A; --done:#6CC9A1; --done-bg:#173328; --fin:#E9A562; --fin-bg:#3A2716; --dev:#93B2EE; --dev-bg:#1D2A42; --dec:#E0A3D3; --dec-bg:#3A2235; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#12171C; --surface:#1A2128; --ink:#E7EBEE; --muted:#9AA6B0; --line:#2C363F; --soft:#222A32;
+  --gold:#D3B04A; --done:#6CC9A1; --done-bg:#173328; --fin:#E9A562; --fin-bg:#3A2716; --dev:#93B2EE; --dev-bg:#1D2A42; --dec:#E0A3D3; --dec-bg:#3A2235; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding:0 16px 64px}
+.wrap{max-width:860px;margin:0 auto}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0}
+a{color:var(--dev)}
+header{padding:40px 0 10px;display:grid;gap:10px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(30px,5vw,42px);line-height:1.08}
+.lede{color:var(--muted);margin:0;max-width:70ch}
+.stamp{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.stat b{display:block;font-family:var(--display);font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13.5px;color:var(--muted)}
+@media (max-width:640px){.summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+section{margin-top:32px;display:grid;gap:10px}
+section>p{margin:0;color:var(--muted)}
+h2{font-size:23px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:6px}
+.th{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.tt{font-weight:700;font-size:17px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.dev{background:var(--dev-bg);color:var(--dev)} .fin{background:var(--fin-bg);color:var(--fin)} .dec{background:var(--dec-bg);color:var(--dec)} .ok{background:var(--done-bg);color:var(--done)}
+.item p{margin:0;max-width:74ch} .item ul{margin:0;padding-left:20px} .item li{margin:2px 0}
+.quote{border-left:3px solid var(--gold);padding-left:12px;color:var(--muted);font-style:italic}
+.now{font-size:14.5px;color:var(--muted)}
+.done-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.done-list li{display:flex;gap:10px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+footer{margin-top:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="brand">FINISH Performance Health · new website</span>
+  <h1>What’s remaining</h1>
+  <p class="lede">Only the open items from the FINISH website checklist (19 October). Everything else is done on staging.</p>
+  <span class="stamp">Checked 19 October 2026, evening, in Webflow · staging published 19 October, 18:23 Sri Lanka time · <a href="index.html">Full checklist</a></span>
+  <div class="summary">
+    <div class="stat"><b>3</b><span>Revinok to do</span></div>
+    <div class="stat"><b>3</b><span>Waiting on FINISH answers</span></div>
+    <div class="stat"><b>12</b><span>Needed from the FINISH team</span></div>
+    <div class="stat"><b>1</b><span>Hosting question for Grant</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Revinok to do</h2>
+  <div class="item">
+    <div class="th"><span class="tt">Share desktop and mobile screenshots</span><span class="chip dev">Revinok</span><span class="chip">Item 10</span></div>
+    <p>The photos are fixed, so screenshots can go out now: the About team section and the Home co-founders section, on desktop and mobile. All profile links already open the right pages.</p>
+  </div>
+  <div class="item">
+    <div class="th"><span class="tt">Show the Youth &amp; Student card on the Services page</span><span class="chip dev">Revinok</span><span class="chip">Item 17, new</span></div>
+    <p>The card linking to /directortho#ortho-youth is set to hidden on the Services page, so it is missing from the services list. The DirectOrtho+ content and $199 price are fine. Show it again unless it was hidden on purpose.</p>
+  </div>
+  <div class="item">
+    <div class="th"><span class="tt">Check Callie’s and Ali Chapas’s photos for softness</span><span class="chip dev">Revinok</span><span class="chip">Item 1</span></div>
+    <p>All team photos are now colour 800 × 1000 files. Callie’s and Ali Chapas’s are enlarged from 420 × 600 sources, so look at them in a browser before sending screenshots.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Waiting on FINISH answers before Revinok can finish</h2>
+  <div class="item">
+    <div class="th"><span class="tt">Direct orthopedic booking link for Kelly Ward’s schedule</span><span class="chip dev">Revinok</span><span class="chip fin">Needs FINISH</span><span class="chip">Item 12</span></div>
+    <p class="quote">“I would like to explore how to link booking orthopedic visits directly to my schedule.”</p>
+    <p>“Book an orthopedic visit” on DirectOrtho+ still opens the general Practice Better services page. Needed: an orthopedic visit service in Practice Better under Kelly Ward’s calendar, and its direct link. Then the button is pointed straight at it.</p>
+  </div>
+  <div class="item">
+    <div class="th"><span class="tt">Healthspan membership value tables</span><span class="chip dev">Revinok</span><span class="chip fin">Needs FINISH</span><span class="chip">Item 11</span></div>
+    <p>Arithmetic checked against Healthspan v6.3 (Bronze $13,720 · Silver $19,485 · Gold $29,950). Waiting on the CT valuation ($300 or $150) and confirmation of value lines with no published price before any comparison is published.</p>
+  </div>
+  <div class="item">
+    <div class="th"><span class="tt">Content check against the source files</span><span class="chip dev">Revinok</span><span class="chip fin">Needs FINISH</span><span class="chip">Item 14</span></div>
+    <p>Checked against all five source files. Open: suite number and the Psalm 115:1 footer quote.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Needed from the FINISH team</h2>
+  <div class="item"><div class="th"><span class="tt">Direct orthopedic booking link for Kelly Ward’s schedule</span><span class="chip fin">FINISH team</span></div><p class="now">See above.</p></div>
+  <div class="item">
+    <div class="th"><span class="tt">Clarify: “link performance testing to our services page”</span><span class="chip fin">FINISH team</span></div>
+    <ul><li><b>Option A:</b> “Book a test now” and “Explore testing &amp; pricing” go to the testing section of the Services page.</li>
+    <li><b>Option B:</b> the Services page testing section gets a “Book” button to Practice Better.</li></ul>
+    <p class="now">Option B is now built on staging. Confirm it is what was meant.</p>
+  </div>
+  <div class="item"><div class="th"><span class="tt">Deana Contaoi, ATC: short bio and photo</span><span class="chip fin">FINISH team</span></div><p class="now">Asked 15 Oct. Her page is ready as a draft.</p></div>
+  <div class="item"><div class="th"><span class="tt">Which team members appear on DirectOrtho+ and which on Healthspan</span><span class="chip fin">FINISH team</span></div><p class="now">Asked 15 Oct.</p></div>
+  <div class="item"><div class="th"><span class="tt">Clinical Manager / Lead ATC: name, photo and bio when official</span><span class="chip fin">FINISH team</span></div><p class="now">Expected in about two weeks. The card is hidden on About for now. Also confirm: keep it hidden, or show a neutral “Coming soon” card?</p></div>
+  <div class="item"><div class="th"><span class="tt">CT valuation for the membership comparison: $300 or $150</span><span class="chip fin">FINISH team</span></div></div>
+  <div class="item"><div class="th"><span class="tt">Suite number: “Suite 102” or “Suites 101 &amp; 102”</span><span class="chip fin">FINISH team</span></div><p class="now">Staging says “Suite 102”, which stays unless FINISH says otherwise.</p></div>
+  <div class="item"><div class="th"><span class="tt">Footer quote: add Psalm 115:1?</span><span class="chip fin">FINISH team</span></div><p class="now">In all source files, not on staging.</p></div>
+  <div class="item"><div class="th"><span class="tt">Membership value lines with no published price</span><span class="chip fin">FINISH team</span></div><p class="now">Onboarding, strength and nutrition values, remote monitoring, DirectOrtho+ access, case reviews, testing and lab allowances.</p></div>
+  <div class="item"><div class="th"><span class="tt">Medical Director sign-off on Healthspan clinical claims</span><span class="chip fin">FINISH team</span></div><p class="now">Healthspan v6.3 marks this a launch blocker.</p></div>
+  <div class="item"><div class="th"><span class="tt">Membership contract documents to match the website</span><span class="chip fin">FINISH team</span></div><p class="now">Remove the Gold outcome guarantee, “testing on request” and old supplement wording before memberships go live.</p></div>
+  <div class="item"><div class="th"><span class="tt">Two open points in Healthspan v6.3</span><span class="chip fin">FINISH team</span></div><p class="now">Lab cadence (2 / 2 + re-test / 3 a year), and the “seventies / thirties” brand line wording.</p></div>
+</section>
+
+<section>
+  <h2>Hosting and access</h2>
+  <div class="item">
+    <div class="th"><span class="tt">Where the site will be hosted, and access for a local team member</span><span class="chip dec">Grant to answer</span><span class="chip">Item 13</span></div>
+    <p class="quote">“Grant, could you let me know where the site will be hosted and if a local team member will have access to make quick updates?”</p>
+    <ul><li>Hosting and account owner</li><li>Domain and DNS access</li><li>How a FINISH team member makes quick content updates</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>At launch</h2>
+  <div class="item">
+    <div class="th"><span class="tt">Go-live checks</span><span class="chip dec">At launch</span></div>
+    <ul>
+      <li>Add all team pages to the sitemap.</li>
+      <li>Keep the /our-team/callie-davis-rd/ redirect; redirect /our-team/ali-johnson-lpn/ to the About team section.</li>
+      <li>Keep the DEXA, VO₂ and staff page addresses and content.</li>
+      <li>Check canonical tags, sitemap, indexing, mobile and every booking button after the domain switch.</li>
+      <li>Founding prices run for six months; at the switch, update page copy, FAQ examples and schema together.</li>
+      <li>Remove internal deployment notes and fill any placeholder links.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Done today</h2>
+  <ul class="done-list">
+    <li><span class="chip ok">Done</span><span>Team photos match the co-founders’ framing, now in colour at 800 × 1000.</span></li>
+    <li><span class="chip ok">Done</span><span>Christopher Gaunder: “Co-Founder · Regenerative/Longevity Director” on About, Home and his page.</span></li>
+    <li><span class="chip ok">Done</span><span>Leah Spivak added to About (Social Media Marketing, no bio).</span></li>
+    <li><span class="chip ok">Done</span><span>Services page testing section has a “Book a test now” button to Practice Better.</span></li>
+    <li><span class="chip ok">Done</span><span>Kelly Ward and Matthew Farmer: full About v8.5 bios on their own pages.</span></li>
+    <li><span class="chip ok">Done</span><span>Healthspan: unlimited messaging in all tiers; Targeted re-test panel $200 added.</span></li>
+    <li><span class="chip ok">Done</span><span>Earlier today: Callie Michaelis rename, Home shows co-founders only, Clinical Manager card hidden, co-founder page photos, Kelly Ward’s page opening, stronger About introduction, Callie redirect.</span></li>
+  </ul>
+</section>
+
+<footer>Sources: the FINISH team’s email and photo feedback of 19 October 2026, earlier requests of 14 to 16 October, the five FINISH source files, and the staging site as published on 19 October.</footer>
+</div>
+</body>
+</html>

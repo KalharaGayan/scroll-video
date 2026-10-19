@@ -1,0 +1,728 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>FINISH Updates 16th Oct (Copy)</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+[hidden]{display:none!important}
+/* Layout: one working column. Progress bar on top, then task groups with tick boxes, then the image downloads. */
+:root{
+  --bg:#F4F5F2; --surface:#FFFFFF; --ink:#18212A; --muted:#5A6570; --line:#DADFE2; --soft:#EBEEEA;
+  --gold:#8E6E12; --done:#1E6A4E; --done-bg:#E3F0EA; --fin:#9A540F; --fin-bg:#F7EADB; --dev:#2D4C8A; --dev-bg:#E2E8F4; --dec:#7A3B6E; --dec-bg:#F3E4EF;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#12171C; --surface:#1A2128; --ink:#E7EBEE; --muted:#9AA6B0; --line:#2C363F; --soft:#222A32;
+  --gold:#D3B04A; --done:#6CC9A1; --done-bg:#173328; --fin:#E9A562; --fin-bg:#3A2716; --dev:#93B2EE; --dev-bg:#1D2A42; --dec:#E0A3D3; --dec-bg:#3A2235; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#12171C; --surface:#1A2128; --ink:#E7EBEE; --muted:#9AA6B0; --line:#2C363F; --soft:#222A32;
+  --gold:#D3B04A; --done:#6CC9A1; --done-bg:#173328; --fin:#E9A562; --fin-bg:#3A2716; --dev:#93B2EE; --dev-bg:#1D2A42; --dec:#E0A3D3; --dec-bg:#3A2235; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:940px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
+a{color:var(--dev)}
+header.top{padding-block:40px 18px;display:grid;gap:10px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.08;font-weight:700}
+.lede{color:var(--muted);max-width:70ch;margin:0}
+.stamp{font-family:var(--mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.linkbox{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.linkbox b{font-weight:600}
+.prog{display:grid;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.prog-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.prog-row b{font-family:var(--display);font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--done);transition:width .3s}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+nav.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+nav.jump a{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);padding:5px 10px;border-radius:999px;background:var(--soft)}
+nav.jump a:hover,nav.jump a:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+section.block{margin-top:34px;display:grid;gap:12px;grid-template-columns:minmax(0,1fr);scroll-margin-top:64px}
+.sec-h{display:grid;gap:4px}
+.sec-h h2{font-size:24px}
+.sec-h p{margin:0;color:var(--muted);max-width:72ch}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;min-width:0}
+.task.is-done{opacity:.72}
+.task.is-done .tt{text-decoration:line-through;text-decoration-thickness:1px}
+.task input[type=checkbox]{width:20px;height:20px;margin:3px 0 0;accent-color:var(--done);cursor:pointer}
+.tb{min-width:0;display:grid;gap:8px}
+.th{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.tt{font-weight:700;font-size:17px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.chip.dev{background:var(--dev-bg);color:var(--dev)} .chip.fin{background:var(--fin-bg);color:var(--fin)}
+.chip.dec{background:var(--dec-bg);color:var(--dec)} .chip.done{background:var(--done-bg);color:var(--done)}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.tb p{margin:0;max-width:74ch} .tb ul,.tb ol{margin:0;padding-left:20px} .tb li{margin:3px 0}
+.quote{border-left:3px solid var(--gold);padding:4px 0 4px 12px;color:var(--muted);font-style:italic;max-width:74ch}
+.now{font-size:14.5px;color:var(--muted)} .now b{color:var(--ink);font-weight:600}
+.copy{background:var(--soft);border-radius:8px;padding:12px 14px;display:grid;gap:8px}
+.copy .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:8px;align-items:center}
+.copy p{white-space:pre-line}
+button.cp{font:600 12px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:3px 10px;cursor:pointer}
+button.cp:focus-visible{outline:2px solid var(--ink)}
+details{border-top:1px solid var(--line);padding-top:8px}
+summary{cursor:pointer;font-weight:600;font-size:14.5px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td code{font-family:var(--mono);font-size:12.5px;overflow-wrap:anywhere}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.person{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.person img,.ph{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--soft)}
+.ph{display:grid;place-items:center;font-family:var(--display);font-size:34px;color:var(--muted)}
+.pi{padding:10px 12px;display:grid;gap:6px;align-content:start}
+.pi label{display:flex;gap:8px;align-items:flex-start;font-weight:700;cursor:pointer}
+.pi label input{width:18px;height:18px;margin-top:2px;accent-color:var(--done);flex:none}
+.pi .role{font-size:13.5px;color:var(--muted)}
+.pi .acts{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px}
+.done-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.done-list li{display:flex;gap:10px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.dlc{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.dlc img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.dlc .pi b{font-size:14.5px}
+.fname{font-family:var(--mono);font-size:11.5px;color:var(--muted);overflow-wrap:anywhere}
+.btn{display:inline-block;font-weight:700;font-size:13.5px;text-decoration:none;color:var(--surface);background:var(--ink);padding:6px 12px;border-radius:7px}
+button.btn{font-family:var(--body);cursor:pointer}
+.dlc img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,14,18,.88);display:grid;grid-template-rows:auto 1fr;gap:10px;padding:max(12px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#F4F5F2;font-size:14px}
+.lb-bar button{font:700 14px var(--body);background:#F4F5F2;color:#18212A;border:0;border-radius:7px;padding:6px 14px;cursor:pointer}
+.lb img{max-width:100%;max-height:100%;margin:auto;object-fit:contain;min-height:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.note{font-size:14px;color:var(--muted);margin:0}
+footer.f{margin-top:30px;color:var(--muted);font-size:14px;display:grid;gap:6px}
+footer.f p{margin:0}
+@media (max-width:640px){ .task{grid-template-columns:24px minmax(0,1fr);padding:12px} }
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .bar i{transition:none} }
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cmp figure{margin:0;background:var(--soft);border-radius:8px;overflow:hidden;display:grid}
+.cmp img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#111}
+.cmp figcaption{font-size:13px;padding:8px 10px;color:var(--muted)}
+.cmp figcaption b{color:var(--ink)}
+@media (max-width:640px){.cmp{grid-template-columns:1fr}}
+.tabbar{display:flex;gap:6px;margin-top:18px;border-bottom:1px solid var(--line)}
+.tabbar button{font:700 15px var(--body);background:transparent;color:var(--muted);border:0;border-bottom:3px solid transparent;padding:10px 14px;cursor:pointer}
+.tabbar button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+.tabbar button:focus-visible{outline:2px solid var(--ink)}
+.srccard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:8px;min-width:0}
+.srccard p{margin:0;max-width:76ch}
+.srchead{display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:space-between;align-items:flex-start}
+.srchead h3{font-size:19px}
+.srcframe iframe{width:100%;height:75vh;border:1px solid var(--line);border-radius:8px;background:#fff}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <span class="brand">FINISH Performance Health · new website</span>
+  <h1>FINISH website updates</h1>
+  <p class="lede">All updates for the new FINISH website, newest first. Each date shows what Revinok has done and what is still to do, checked against the staging site.</p>
+  <span class="stamp">Updated 19 October 2026, evening · checked in Webflow against the staging publish of 19 October, 18:23 Sri Lanka time · <a href="remaining.html">What’s remaining</a></span>
+  <div class="linkbox">
+    <span><b>Staging:</b> <a href="https://finish-new-update.webflow.io/" target="_blank" rel="noopener">finish-new-update.webflow.io</a></span>
+    <span><b>About page:</b> <a href="https://finish-new-update.webflow.io/about" target="_blank" rel="noopener">/about</a></span>
+    <span><b>Current live team page:</b> <a href="https://finishperformancehealth.com/our-team/" target="_blank" rel="noopener">finishperformancehealth.com/our-team</a></span>
+  </div>
+  <div class="linkbox" style="border-color:var(--fin);background:var(--fin-bg)"><span><b>Still needed from the FINISH team (12):</b> direct orthopedic booking link for Kelly Ward’s schedule · what “link performance testing to services” means · Deana Contaoi’s bio and photo · team members per pillar · Clinical Manager / Lead ATC details when official · CT valuation · suite number · Psalm 115:1 footer quote · membership value lines with no published price · Medical Director sign-off on Healthspan claims · membership contract documents · two Healthspan v6.3 open points. <a href="#oct19-wait">See details</a></span></div>
+  <div class="prog" aria-live="polite">
+    <div class="prog-row"><span>Ticked off</span><span><b id="pc">0</b> of <span id="pt">0</span></span></div>
+    <div class="bar"><i id="pb"></i></div>
+    <div class="legend"><span><span class="chip dev">Revinok</span> our team builds it</span><span><span class="chip dec">At launch</span> on go-live day</span><span><span class="chip fin">FINISH</span> waiting on the client</span></div>
+    <p class="note">Ticks are saved in your own browser.</p>
+  </div>
+</header>
+<div class="tabbar" role="tablist" aria-label="Views">
+  <button type="button" role="tab" id="tabbtn-tracker" aria-selected="true" data-tab="tracker">Tracker</button>
+  <button type="button" role="tab" id="tabbtn-sources" aria-selected="false" data-tab="sources">Source files (5)</button>
+</div>
+<div id="tab-tracker" role="tabpanel" aria-labelledby="tabbtn-tracker">
+
+<nav class="jump" aria-label="Sections">
+  <a href="#oct19">19 Oct</a><a href="#oct19-todo">To do today</a><a href="#oct16">16 Oct</a><a href="#seo">Team pages and SEO</a><a href="#team">Full team</a><a href="#mobile">Mobile</a><a href="#finish">Needed from FINISH</a><a href="#done">Already done</a><a href="#downloads">Downloads</a>
+</nav>
+
+<!-- ===================== 19 OCT ===================== -->
+<section class="block" id="oct19">
+  <div class="sec-h" style="background:var(--soft);padding:16px 18px;border-radius:10px"><h2>19 October 2026</h2><p>The FINISH team’s latest requests. These replace the earlier Home and team layout. The FINISH team hopes to complete them this week; this is not a confirmed launch date.</p></div>
+</section>
+<section class="block" id="oct19-done"><div class="sec-h"><h2>Done today</h2><p>Checked on staging, 19 October.</p></div>
+  <div class="task" data-k="n19d1"><input type="checkbox" id="n19d1" aria-labelledby="n19d1l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19d1l">Callie Davis renamed Callie Michaelis</span><span class="chip done">Done</span><span class="src">Staging, 19 Oct</span></div>
+    <p class="now">Name updated on the About card, her page heading and bio. SEO title “Callie Michaelis RD Athens GA | Finish Performance Health” and a new meta description. Her page address is being returned to the original one (see item 6 below).</p>
+  </div></div>
+  <div class="task" data-k="n19d2"><input type="checkbox" id="n19d2" aria-labelledby="n19d2l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19d2l">Home page shows only the three co-founders</span><span class="chip done">Done</span><span class="src">Staging, 19 Oct</span></div>
+    <p class="now">Kelly Ward, Matthew Farmer and Christopher Gaunder on Home. The full team stays on About, co-founders first and everyone else underneath.</p>
+  </div></div>
+  <div class="task" data-k="n19d3"><input type="checkbox" id="n19d3" aria-labelledby="n19d3l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19d3l">Clinical Manager / Lead ATC placeholder hidden</span><span class="chip done">Done</span><span class="src">Staging, 19 Oct</span></div>
+    <p class="now">Removed from Home and About for now, following the latest photo feedback (“remove this one for now”). The FINISH team’s written handoff asks for a neutral “Coming soon” card instead, so this needs one final confirmation. Details of the person can be announced in about two weeks; do not assume it is Deana.</p>
+  </div></div>
+  <div class="task" data-k="n19d4"><input type="checkbox" id="n19d4" aria-labelledby="n19d4l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19d4l">First version of the new About team introduction</span><span class="chip done">Done</span><span class="src">Staging, 19 Oct</span></div>
+    <p class="now">Live on About. A stronger version is in item 5 below.</p>
+  </div></div>
+</section>
+<section class="block" id="oct19-todo"><div class="sec-h"><h2>To do today</h2><p>Revinok items, in order.</p></div>
+  <div class="task" data-k="n19t1"><input type="checkbox" id="n19t1" aria-labelledby="n19t1l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t1l">1. Re-crop all team photos to match the co-founders</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="quote">“Can we make the team photos same size and style like owners… and take in account free space.”</p>
+    <div class="cmp">
+      <figure><img src="img/founder-framing.jpg" alt="Co-founder headshot"><figcaption><b>Co-founder (target)</b> Small in frame, dark space around, shoulders fade to black.</figcaption></figure>
+      <figure><img src="img/reference-free-space.jpg" alt="Free space reference"><figcaption><b>FINISH team reference</b> The marks show the free space to keep around the head.</figcaption></figure>
+      <figure><img src="img/team-framing.jpg" alt="Team headshot today"><figcaption><b>Team today</b> Cropped too tight, grey oval with a hard edge.</figcaption></figure>
+    </div>
+    <ul>
+      <li><b>Photos:</b> Neale Maddox, Haley Chasteen, Mike Hayden, Scott Sinclair, Caroline Ward, Cynthia Mercer, Callie Michaelis, Ali Chapas, and Leah Spivak once added.</li>
+      <li><b>Frame:</b> 4:5 portrait like the co-founders, export about 960 × 1200.</li>
+      <li><b>Head:</b> top of the head about 20% down, chin around the middle, face about 40% of the frame width, equal space left and right.</li>
+      <li><b>Style:</b> same black-and-white tone and soft dark glow, shoulders fading into black. No grey oval or hard edge.</li>
+      <li>Use the new crops on the About cards and on each person’s own page.</li>
+    </ul>
+    <p class="now"><b>Status 19 Oct: size and framing now match the co-founders. Still to do: the files were saved in black and white, so no colour appears on hover; re-export in colour with the same crop and dark background. They also look soft because they were enlarged from small sources; export at 800 × 1000 from the largest originals (Haley 3179 × 4314, Neale 954 × 1649, Mike, Scott, Caroline, Cynthia and Leah 840 × 1200). Callie and Ali Chapas only exist at 420 × 600.</b></p>
+    <p class="now"><b>Done, checked 19 Oct evening: all eight team photos (and Leah’s) are now colour files at 800 × 1000 (…-color-800x1000-20261019.webp) on the About cards and each person’s page. Callie’s photo file is renamed to callie-michaelis. Callie and Ali Chapas are enlarged from 420 × 600 sources, so give them a visual check for softness.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t2"><input type="checkbox" id="n19t2" aria-labelledby="n19t2l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t2l">2. Co-founders’ own pages: use the About headshots</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="quote">“Please update the individual page photos for the three co-founders using the three headshots you already have.”</p>
+    <ul><li>/our-team/kelly-ward-pa, /our-team/matthew-farmer-md and /our-team/christopher-gaunder-md still show the old photos from the current website.</li>
+    <li>Use the same headshots as About: team-kelly-ward, team-matthew-farmer, team-christopher-gaunder.</li></ul>
+    <p class="now"><b>Done on staging 19 Oct: all three co-founder pages use the About headshots.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t3"><input type="checkbox" id="n19t3" aria-labelledby="n19t3l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t3l">3. Kelly Ward’s own page: match his About bio</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="now"><b>Now on his page:</b> the old text “With over 30 years of expertise in orthopedic sports medicine…”.</p>
+    <p>Open his page bio with the supplied About copy (28 years in orthopedics, 26 years with UGA):</p>
+    <div class="copy"><div class="lbl"><span>Kelly Ward · page bio opening</span><button class="cp" type="button" data-copy="n19kb">Copy</button></div><p id="n19kb">Kelly brings 28 years of orthopedic and sports medicine experience, including 26 years with UGA Athletics. An Emory-trained physician assistant practicing since 1998, Kelly helps shape FINISH’s coordinated, conservative-first approach to care.</p></div>
+    <p class="now"><b>Done on staging 19 Oct: Kelly Ward’s page opens with the 28 years / 26 years with UGA copy, and the old “over 30 years” text is gone.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t4"><input type="checkbox" id="n19t4" aria-labelledby="n19t4l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t4l">4. Christopher Gaunder’s title: Regenerative/Longevity Director</span><span class="chip done">Done</span><span class="src">FINISH team source</span></div>
+    <p class="now"><b>Now on staging:</b> “Co-Founder · Longevity Director” on About and on his own page.</p>
+    <ul><li>Change to <b>Co-Founder · Regenerative/Longevity Director</b> on the About card, the Home card and his own page.</li></ul>
+    <p class="now"><b>Done, checked 19 Oct evening: “Co-Founder · Regenerative/Longevity Director” on About, Home and his own page.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t5"><input type="checkbox" id="n19t5" aria-labelledby="n19t5l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t5l">5. Stronger About team introduction</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="quote">“Highlighting how each member was chosen for their expertise and how they embody our vision of proactive medicine.”</p>
+    <p>Replace the current introduction with this version, which adds why the team was chosen and FINISH’s purpose-driven approach:</p>
+    <div class="copy"><div class="lbl"><span>About · team introduction</span><button class="cp" type="button" data-copy="n19intro">Copy</button></div><p id="n19intro">One team, chosen with purpose.
+
+Every member of the FINISH team was chosen for their expertise and for the way they practice: proactively, with the whole person in view. From orthopedics and imaging to physical therapy, athletic training, nutrition and performance, each brings years of hands-on experience to one shared record.
+
+We are purpose driven. Our goal is to help the people of Athens stay strong, active and healthy through every season of life, and we count it a privilege to care for this community.</p></div>
+    <p class="now"><b>Done on staging 19 Oct: the stronger introduction is live on About.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t6"><input type="checkbox" id="n19t6" aria-labelledby="n19t6l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t6l">6. Callie Michaelis: keep her original page address</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <ul><li>Her page moved to /our-team/callie-michaelis-rd, and the old /our-team/callie-davis-rd/ now shows “page not found”.</li>
+    <li>Change her page address back to <b>/our-team/callie-davis-rd</b> so the existing link keeps working. Her name stays Callie Michaelis everywhere.</li>
+    <li>If the new address is kept instead, a 301 redirect from the old one is required.</li></ul>
+    <p class="now"><b>Done: /our-team/callie-davis-rd now redirects to /our-team/callie-michaelis-rd.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t7"><input type="checkbox" id="n19t7" aria-labelledby="n19t7l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t7l">7. Add Leah Spivak to the full team on About</span><span class="chip done">Done</span><span class="src">Current website team page</span></div>
+    <ul><li>The current website lists <b>Leah Spivak, Social Media Marketing</b>. She is missing from the new About page.</li>
+    <li>Add her card with her name and role. Do not write a bio for her.</li>
+    <li>Her photo from the current website is below and in <a href="#downloads">Downloads</a> (leah-spivak.webp, 840 × 1200). Crop it to match the co-founders, like the rest of the team.</li></ul>
+    <div class="cmp"><figure><img src="img/leah-spivak.webp" alt="Leah Spivak"><figcaption><b>Leah Spivak</b> Social Media Marketing · current website photo</figcaption></figure></div>
+    <p class="now"><b>Done, checked 19 Oct evening: Leah’s card is on About (“Social Media Marketing”, photo, no bio).</b></p>
+  </div></div>
+  <div class="task" data-k="n19t8"><input type="checkbox" id="n19t8" aria-labelledby="n19t8l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t8l">8. Performance testing: route to the services booking page</span><span class="chip done">Done</span><span class="src">FINISH team, 19 Oct</span></div>
+    <ul><li>Testing buttons (Services page testing section, Healthspan “Book a test now”, DEXA and VO₂) should go to the Practice Better services booking page, the same one the current website uses: <code>https://finish.practicebetter.io/#/66ce7398a8704f1bd7a9d9ec/bookings?step=services</code></li>
+    <li>Click through each button to confirm it opens that page.</li>
+    <li>The same link is the verified “Book Now” destination on the current website’s DEXA page (finishperformancehealth.com/our-services/dexa-scan-athens-ga/), and the VO₂ page (finishperformancehealth.com/our-services/vo2-max-athens-ga/) also links to Practice Better.</li>
+    <li>No full booking or payment test has been done yet.</li></ul>
+    <p class="now"><b>Status 19 Oct: Healthspan “Book a test now” already opens the Practice Better services booking page. The Services page testing section has no booking button yet; add one there.</b></p>
+    <p class="now"><b>Done, checked 19 Oct evening: the Services page now has a “Book a test now” button to the same Practice Better page. The FINISH team still needs to confirm this is what they meant (see “Clarify: link performance testing to our services page” below).</b></p>
+  </div></div>
+  <div class="task" data-k="n19t9"><input type="checkbox" id="n19t9" aria-labelledby="n19t9l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t9l">9. “Treat. Measure. Build.” section: replace the background</span><span class="chip done">Done</span><span class="src">FINISH team</span></div>
+    <p class="now">Already replaced on staging: the section now uses a hands-on exam video instead of the artificial-joint visual.</p>
+  </div></div>
+  <div class="task" data-k="n19t10"><input type="checkbox" id="n19t10" aria-labelledby="n19t10l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t10l">10. Check all team links, then share screenshots</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 19 Oct</span></div>
+    <ul><li>Every About card and “Read full profile” link opens the right page, on desktop and mobile. Keep the mobile Home fix in QA.</li>
+    <li>Share desktop and mobile screenshots of the About team section and the Home co-founders section.</li></ul>
+    <p class="now"><b>Status 19 Oct: all 11 profile links open the right pages on desktop and mobile. Team cards on mobile: one per row, no sideways scrolling. Photos are now fixed, so the screenshots can be taken and shared.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t11"><input type="checkbox" id="n19t11" aria-labelledby="n19t11l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t11l">11. Healthspan membership value tables</span><span class="chip dev">Revinok</span><span class="src">FINISH team source, Healthspan v6.3</span></div>
+    <ul>
+      <li>The FINISH team’s Healthspan v6.3 file already has quantities and individual-value tables: <b>Bronze $13,720 · Silver $19,485 · Gold $29,950</b>. These are source figures, not yet approved for publication.</li>
+      <li>Check the quantities, valuations and arithmetic against the benefits shown on the Healthspan page.</li>
+      <li>Open point: CT is valued at $300 in the memberships but $150 within the day programs.</li>
+      <li>Keep annual membership fees, payment-plan prices and any savings figures that reveal them hidden. (Checked: none are shown on staging.)</li>
+      <li>The Healthspan v6.3 and About v8.5 files have been requested.</li>
+    </ul>
+    <div class="copy" style="background:var(--done-bg)"><div class="lbl"><span>Checked 19 Oct against Healthspan v6.3</span></div>
+    <p><b>Arithmetic:</b> all three totals add up exactly from their line items (Bronze $13,720, Silver $19,485, Gold $29,950).
+<b>Benefits on staging:</b> every tier benefit matches v6.3 (labs, reassessments, CGM, lactate, CT and sleep screening, strength, nutrition, PT, Recovery Zone, care credit, orthopedic access, coverage, monitoring, case review, reporting, supplements, six-month review). One gap: “Unlimited messaging and support” is in every v6.3 tier (and valued at $1,200) but is not listed on staging.
+<b>Service prices on staging:</b> match v6.3. Missing from the staging menu: “Targeted re-test panel $200”, which is used in the Silver value.
+<b>Not traceable to a published price:</b> onboarding $1,150; strength and conditioning and nutrition full-year values; remote monitoring ($600 / $900 / $1,400, while the menu says $200 per quarter); DirectOrtho+ access ($1,000 / $1,500 / $2,250, while the DirectOrtho+ membership is $399 / $899); MD/PA-C review, case conference and Annual Healthspan Review; additional testing and lab allowances. These need the FINISH team’s confirmation before any comparison is published.
+<b>CT:</b> valued at $300 in Silver and Gold. At $150 the totals would be $19,335 and $29,800. v6.3 itself marks this “Confirm”.
+<b>Do not copy from v6.3:</b> the annual dues, the “You save” lines and the payment plans (paid in full, quarterly, monthly). Staging correctly shows none of these.</p></div>
+  </div></div>
+  <div class="task" data-k="n19t12"><input type="checkbox" id="n19t12" aria-labelledby="n19t12l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t12l">12. Orthopedic booking: direct link to Kelly Ward’s schedule</span><span class="chip dev">Revinok</span><span class="chip fin">Needs FINISH</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="quote">“I would like to explore how to link booking orthopedic visits directly to my schedule.”</p>
+    <ul><li>“Book an orthopedic visit” opens the general Practice Better services list, which has no orthopedic visit.</li>
+    <li>Check Practice Better for an orthopedic visit service on Kelly Ward’s schedule and its direct booking link. If there isn’t one, the FINISH team needs to set it up under Kelly Ward’s calendar and send the link. The button then goes straight to that service.</li></ul>
+    <p class="now"><b>Status 19 Oct evening: not done. The DirectOrtho+ button still opens the general Practice Better services page.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t13"><input type="checkbox" id="n19t13" aria-labelledby="n19t13l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t13l">13. Hosting and editor access</span><span class="chip dev">Revinok</span><span class="chip dec">Grant to answer</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="quote">“Grant, could you let me know where the site will be hosted and if a local team member will have access to make quick updates?”</p>
+    <ul><li>Confirm where the site will be hosted and who owns the account.</li><li>Confirm domain and DNS access.</li><li>Confirm how a FINISH team member can make quick content updates.</li></ul>
+  </div></div>
+  <div class="task" data-k="n19t14"><input type="checkbox" id="n19t14" aria-labelledby="n19t14l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t14l">14. Check content against the FINISH team’s source files</span><span class="chip dev">Revinok</span><span class="src">FINISH team source files</span></div>
+    <ul><li>Keep the current design. Use the FINISH team’s five source files for content: MasterBrand Web v3.1, DirectOrtho v10.6, Healthspan v6.3, About v8.5 and Longevity v3.1. Later email corrections take priority.</li>
+    <li>Healthspan v6.3 and About v8.5 have been requested. Once received, check the About page and team bios against About v8.5.</li>
+    <li>Rechecked today on staging: Youth &amp; Student visits and concussion care at $199 are in, Virtual Concussion is out, Longevity says “Coming soon” with no “not accepting patients” wording, and no membership fees appear anywhere.</li>
+    <li>DirectOrtho+: same-day access, orthopedic sports medicine under one roof, Athletic Training Room open to the public, transparent self-pay pricing and fuller PRP/orthobiologics explanations. Do not follow the older blanket Phase 2 exclusion.</li>
+    <li>Healthspan order: introduction, then individual services and tests with prices, then Baseline Day and Executive Physical with prices, then memberships with benefits but no annual fees, payment-plan prices or savings figures.</li>
+    <li>Longevity: positive teasers (“Coming soon”, “Your next 25 years are already being written…”), with full launch planned for the start of 2027.</li>
+    <li>Team: Haley Chasteen replaces Ali Johnson; Ali Chapas, PT stays (different person). Neale Maddox, RT(R) is she/her. Neale’s and Haley’s bios and photos are already received. Keep individual profile pages plus the quick-read pop-ups.</li></ul>
+    <div class="copy" style="background:var(--done-bg)"><div class="lbl"><span>Checked 19 Oct against About v8.5</span></div>
+    <p><b>Kelly Ward’s page:</b> v8.5 has a fuller bio (UGA graduate, Emory PA training, practicing since 1998, 26 years with UGA Athletics, his history with Chris Gaunder, and his conservative-first conviction). His page has only the opening. Use the full v8.5 bio (item 15).
+<b>Matthew Farmer’s page:</b> still the current website bio. v8.5 has an updated bio (14 years in internal medicine, Medical College of Georgia, medical oversight and clinical governance). Use the v8.5 bio (item 15).
+<b>Christopher Gaunder:</b> v8.5 says “Director, FINISH Longevity”. The FINISH team’s later instruction is “Regenerative/Longevity Director”, which takes priority (item 4). His page already includes the separate-practice note.
+<b>Address:</b> About v8.5 and Longevity v3.1 say “Suites 101 &amp; 102”; MasterBrand Web v3.1 and staging say “Suite 102”. Needs the FINISH team to confirm.
+<b>Footer quote:</b> MasterBrand Web v3.1, About v8.5 and Longevity v3.1 all end with Psalm 115:1. It is not on staging. Needs the FINISH team to confirm.
+<b>Do not copy from v8.5:</b> “Longevity: not open, not accepting patients”. The FINISH team’s later wording (“Coming soon”) replaces it. The generic team roles in v8.5 are replaced by the named team.</p></div>
+  </div></div>
+  <div class="task" data-k="n19t15"><input type="checkbox" id="n19t15" aria-labelledby="n19t15l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t15l">15. Kelly Ward and Matthew Farmer: full bios from About v8.5</span><span class="chip done">Done</span><span class="src">About v8.5</span></div>
+    <ul><li>Replace the bio on each person’s own page with the full About v8.5 bio below. Keep the shorter About card text as it is.</li>
+    <li>Punctuation only adjusted from the source (dashes replaced); wording unchanged.</li></ul>
+    <div class="copy"><div class="lbl"><span>Kelly Ward, MMSc, PA-C · own page bio</span><button class="cp" type="button" data-copy="n19kfull">Copy</button></div><p id="n19kfull">Kelly Ward is a co-founder and the full-time clinical leader of FINISH Performance Health, with 28 years in orthopedics and sports medicine in Athens. The same clinician performs your exam, reads your imaging, builds your plan, and follows your case. A University of Georgia graduate, he completed his physician assistant training at Emory University, began practicing as an orthopedic PA in 1998, and served alongside UGA Athletics for 26 years, working with athletes at every level from youth to elite competition.
+
+One of those athletes was Chris Gaunder. Kelly was his orthopedic PA-C during his playing days at Georgia, followed his career through medical school, residency, and a decade of military service, and ultimately recruited him home to Athens as a co-founder of this practice. It is the kind of relationship FINISH is built on.
+
+His conviction is simple and hard-won: most musculoskeletal problems never need surgery; they need time, an accurate diagnosis, and the right conservative-first plan. FINISH is the practice he built to deliver exactly that.</p></div>
+    <div class="copy"><div class="lbl"><span>Matthew Farmer, MD · own page bio</span><button class="cp" type="button" data-copy="n19mf">Copy</button></div><p id="n19mf">Dr. Matthew Farmer serves as Medical Director of FINISH Performance Health, bringing 14 years of experience in internal medicine to the practice. A University of Georgia graduate, he earned his medical degree at the Medical College of Georgia.
+
+He provides medical oversight across the FINISH ecosystem. His presence is what lets a musculoskeletal evaluation here sit inside a complete picture of your health, not apart from it, and it anchors the whole-person, conservative-first philosophy at the center of everything FINISH does.
+
+As Medical Director, Dr. Farmer provides the clinical governance that holds FINISH to a standard beyond the minimum: the same standard the team would demand for their own care.</p></div>
+    <p class="now"><b>Done, checked 19 Oct evening: both pages use the full About v8.5 bios, word for word.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t16"><input type="checkbox" id="n19t16" aria-labelledby="n19t16l" checked><div class="tb">
+    <div class="th"><span class="tt" id="n19t16l">16. Healthspan page: two small gaps against v6.3</span><span class="chip done">Done</span><span class="src">Healthspan v6.3</span></div>
+    <ul><li>Add <b>“Unlimited messaging and support with your care team”</b> to the Act list of all three tiers (Bronze, Silver, Gold). It is in every v6.3 tier.</li>
+    <li>Add <b>“Targeted re-test panel · $200”</b> to the service menu (Consultation and labs): “A focused re-draw of only the markers that came back off, to establish whether what you changed actually worked.”</li></ul>
+    <p class="now"><b>Done, checked 19 Oct evening: the messaging line is in all three tiers, and “Targeted re-test panel · $200” is on the service menu with the description above.</b></p>
+  </div></div>
+  <div class="task" data-k="n19t17"><input type="checkbox" id="n19t17" aria-labelledby="n19t17l"><div class="tb">
+    <div class="th"><span class="tt" id="n19t17l">17. Services page: Youth &amp; Student card is hidden</span><span class="chip dev">Revinok</span><span class="src">Found in check, 19 Oct evening</span></div>
+    <ul><li>On the Services page, the Youth &amp; Student card (linking to /directortho#ortho-youth) is set to hidden, so it does not appear in the services list.</li>
+    <li>The Youth &amp; Student content and $199 pricing on the DirectOrtho+ page are fine.</li>
+    <li>Show the card again, unless it was hidden on purpose.</li></ul>
+  </div></div>
+</section>
+<section class="block" id="oct19-wait"><div class="sec-h"><h2>Still needed from the FINISH team</h2></div>
+  <div class="task" data-k="n19w11"><input type="checkbox" id="n19w11" aria-labelledby="n19w11l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w11l">Direct orthopedic booking link for Kelly Ward’s schedule</span><span class="chip fin">FINISH team</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p class="now">Set up an orthopedic visit service in Practice Better under Kelly Ward’s calendar and send its direct booking link. See item 12.</p>
+  </div></div>
+  <div class="task" data-k="n19w12"><input type="checkbox" id="n19w12" aria-labelledby="n19w12l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w12l">Clarify: “link performance testing to our services page”</span><span class="chip fin">FINISH team</span><span class="src">FINISH team, 19 Oct</span></div>
+    <p>Which of these is meant?</p>
+    <ul><li><b>Option A:</b> the “Book a test now” and “Explore testing &amp; pricing” buttons go to the testing section of the Services page.</li>
+    <li><b>Option B:</b> the Services page testing section (Blueprint testing, lab panels) gets a “Book” button that goes to Practice Better.</li></ul>
+    <p class="now"><b>Option B is now built on staging (item 8). Confirm it is what was meant.</b></p>
+  </div></div>
+  <div class="task" data-k="n19w1"><input type="checkbox" id="n19w1" aria-labelledby="n19w1l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w1l">Deana Contaoi, ATC: short bio and photo</span><span class="chip fin">FINISH team</span><span class="src">Open</span></div>
+
+  </div></div>
+  <div class="task" data-k="n19w2"><input type="checkbox" id="n19w2" aria-labelledby="n19w2l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w2l">Which team members appear on DirectOrtho+ and which on Healthspan</span><span class="chip fin">FINISH team</span><span class="src">Open</span></div>
+
+  </div></div>
+  <div class="task" data-k="n19w3"><input type="checkbox" id="n19w3" aria-labelledby="n19w3l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w3l">Clinical Manager / Lead ATC: details when official</span><span class="chip fin">FINISH team</span><span class="src">In about two weeks</span></div>
+
+  </div></div>
+  <div class="task" data-k="n19w4"><input type="checkbox" id="n19w4" aria-labelledby="n19w4l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w4l">CT valuation for the membership comparison ($300 or $150)</span><span class="chip fin">FINISH team</span><span class="src">Open</span></div>
+
+  </div></div>
+  <div class="task" data-k="n19w5"><input type="checkbox" id="n19w5" aria-labelledby="n19w5l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w5l">Suite number: “Suite 102” or “Suites 101 &amp; 102”</span><span class="chip fin">FINISH team</span><span class="src">Sources differ</span></div>
+    <p class="now">Staging, MasterBrand Web v3.1, DirectOrtho v10.6 and Healthspan v6.3 say “Suite 102”, and DirectOrtho v10.6 records “Address confirmed: Suite 102” (5 Oct). About v8.5 and Longevity v3.1 still say “Suites 101 &amp; 102”. Keep “Suite 102” unless the FINISH team says otherwise.</p>
+  </div></div>
+  <div class="task" data-k="n19w6"><input type="checkbox" id="n19w6" aria-labelledby="n19w6l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w6l">Footer quote: add Psalm 115:1?</span><span class="chip fin">FINISH team</span><span class="src">In all source files</span></div>
+    <p class="now">MasterBrand Web v3.1, About v8.5 and Longevity v3.1 all end with “Not to us, Lord, not to us, but to Your name be the glory.” (Psalm 115:1). It is not on staging.</p>
+  </div></div>
+  <div class="task" data-k="n19w7"><input type="checkbox" id="n19w7" aria-labelledby="n19w7l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w7l">Membership value lines with no published price</span><span class="chip fin">FINISH team</span><span class="src">Healthspan v6.3</span></div>
+    <p class="now">Onboarding $1,150; strength and nutrition full-year values; remote monitoring ($600 / $900 / $1,400 vs $200 per quarter); DirectOrtho+ access ($1,000 / $1,500 / $2,250 vs the $399 / $899 membership); case reviews, case conference and Annual Healthspan Review; additional testing and lab allowances. Confirm before any value comparison is published.</p>
+  </div></div>
+  <div class="task" data-k="n19w8"><input type="checkbox" id="n19w8" aria-labelledby="n19w8l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w8l">Medical Director sign-off on Healthspan clinical claims</span><span class="chip fin">FINISH team</span><span class="src">Healthspan v6.3 notes</span></div>
+    <p class="now">Healthspan v6.3 says every factual claim in the service descriptions is listed in “FINISH_Healthspan_ClinicalClaims_Review.md” for the Medical Director (Matthew Farmer, MD) to sign off line by line before launch, and calls this a launch blocker.</p>
+  </div></div>
+  <div class="task" data-k="n19w9"><input type="checkbox" id="n19w9" aria-labelledby="n19w9l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w9l">Membership contract documents to match the website</span><span class="chip fin">FINISH team</span><span class="src">Healthspan v6.3 and DirectOrtho v10.6 notes</span></div>
+    <p class="now">FINISH_Membership_Tiers.docx and the v28 membership model still carry the removed Gold outcome guarantee, “testing on request” and the old supplement wording. The website no longer says these. The documents become the contract when a member signs, so the FINISH team needs to update them before memberships go live.</p>
+  </div></div>
+  <div class="task" data-k="n19w10"><input type="checkbox" id="n19w10" aria-labelledby="n19w10l"><div class="tb">
+    <div class="th"><span class="tt" id="n19w10l">Two open points in Healthspan v6.3</span><span class="chip fin">FINISH team</span><span class="src">Healthspan v6.3 notes</span></div>
+    <ul><li>Lab cadence: the tier table still shows 2 / 2 + re-test / 3 lab panels a year. v6.3 asks the FINISH team to confirm this is meant to stay.</li>
+    <li>The brand book still says “decides your seventies is measurable in your thirties”; the Healthspan page uses softer wording. v6.3 asks to change both or neither.</li></ul>
+  </div></div>
+</section>
+<section class="block" id="oct19-launch"><div class="sec-h"><h2>At launch</h2></div>
+  <div class="task" data-k="n19l1"><input type="checkbox" id="n19l1" aria-labelledby="n19l1l"><div class="tb">
+    <div class="th"><span class="tt" id="n19l1l">Go-live checks</span><span class="chip dec">At launch</span><span class="src">Domain switch</span></div>
+    <ul><li>301 redirects for any changed addresses (old Ali Johnson page to the About team section).</li>
+    <li>Keep the DEXA, VO₂ and staff page addresses and content.</li>
+    <li>Check canonical tags, sitemap, indexing, mobile and every booking button after the domain switch.</li>
+    <li>Founding prices run for six months (new patient $259 to $279, FASTPassOrtho+ $329 to $349, CompleteOrtho+ $359 to $379, Athlete Baseline $99 to $129). At the switch, update page copy, FAQ examples and schema together.</li>
+    <li>Remove the source files’ internal deployment notes and fill any remaining placeholder links before publishing.</li>
+    <li>Add all team pages to the sitemap. Keep the /our-team/callie-davis-rd/ redirect to Callie Michaelis’s page, and redirect /our-team/ali-johnson-lpn/ to the About team section.</li></ul>
+  </div></div>
+</section>
+
+<section class="block" id="oct16"><div class="sec-h" style="background:var(--soft);padding:16px 18px;border-radius:10px"><h2>16 October 2026</h2><p>Earlier requests. All done on staging except the items carried into 19 October above.</p></div></section>
+
+<!-- ===================== NEW 16 OCT ===================== -->
+<section class="block" id="new">
+  <div class="sec-h"><h2>New from the FINISH team, 16 October</h2><p>“Sharing this information with you as I receive it.”</p></div>
+
+  <div class="task" data-k="t1"><input type="checkbox" id="t1" checked aria-labelledby="t1l"><div class="tb">
+    <div class="th"><span class="tt" id="t1l">Add a placeholder for Clinical Manager / Lead ATC</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 16 Oct</span></div>
+    <p class="quote">“Please create a placeholder for this role. It will be another two weeks before we can make this official.”</p>
+    <ul>
+      <li>Add a team card with the role title <b>Clinical Manager / Lead ATC</b>, a neutral image in place of a photo, and “Coming soon” in place of the name.</li>
+      <li>No bio for now. Build it so the name, photo and bio can be dropped in when FINISH confirms the person.</li>
+      <li>Place it with the rest of the team, under the three co-founders (About page, and the Home team section if the team appears there).</li>
+    </ul>
+  </div></div>
+
+  <div class="task" data-k="t2"><input type="checkbox" id="t2" checked aria-labelledby="t2l"><div class="tb">
+    <div class="th"><span class="tt" id="t2l">Neale Maddox: new title and photo</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 16 Oct</span></div>
+    <p class="now"><b>Done on staging:</b> card and page now show “Imaging/Operations Director” with Neale’s photo.</p>
+    <ul>
+      <li>Change the title to <b>Imaging/Operations Director</b>. Name stays <b>Neale Maddox, RT(R)</b>.</li>
+      <li>Replace the monogram with Neale’s photo (FINISH team: “Brown Hair”). Download it from <a href="#downloads">Downloads</a>.</li>
+      <li>Keep the bio as it is. Update the title in the pop-up too.</li>
+    </ul>
+  </div></div>
+
+  <div class="task" data-k="t3"><input type="checkbox" id="t3" checked aria-labelledby="t3l"><div class="tb">
+    <div class="th"><span class="tt" id="t3l">Haley Chasteen: retouch her photo</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 16 Oct</span></div>
+    <p class="quote">“Dirty Blonde Hair. Could you please touch up the photo to clean up hair and a pimple?”</p>
+    <ul>
+      <li>Tidy the flyaway hairs around the top and sides of her head.</li>
+      <li>Remove the blemish. Keep the rest natural so it sits well next to the other team photos.</li>
+      <li>Original photo (3179 × 4314) and an un-retouched 4:5 crop are in <a href="#downloads">Downloads</a>.</li>
+    </ul>
+  </div></div>
+
+  <div class="task" data-k="t4"><input type="checkbox" id="t4" checked aria-labelledby="t4l"><div class="tb">
+    <div class="th"><span class="tt" id="t4l">Haley Chasteen: add her card and bio</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 14 and 16 Oct</span></div>
+    <ul>
+      <li>Name: <b>Haley Chasteen</b>. Title: <b>Client Navigator</b>. No credentials were given, so none after her name.</li>
+      <li>Use the retouched photo once it is ready.</li>
+      <li>Bio: FINISH sent a first-person “education history”. Below is a short third-person version in the same voice as the other bios, using only what she wrote. The original is underneath for reference.</li>
+    </ul>
+    <div class="copy">
+      <div class="lbl"><span>Website bio (suggested)</span><button class="cp" type="button" data-copy="hbio">Copy</button></div>
+      <p id="hbio">Haley brings hands-on experience across patient care and practice operations. She began her career as a Patient Care Technician at Piedmont Athens Regional, then served as a Referral Coordinator in a dermatology practice, the central point of contact between patients, providers and outside offices. As an Infusion Specialist at an insulin infusion center, she supported patients with diabetes and worked closely with their care teams. She also helped launch the company’s second infusion clinic and served as its office manager. Haley holds specialized certifications across several areas of healthcare, and her passion for physical health and wellbeing is what brought her to FINISH.</p>
+    </div>
+    <details><summary>Original text from FINISH (Blank 33.pages)</summary>
+      <div class="copy" style="margin-top:8px"><p>Haley Chasteen
+Education history for FINISH
+
+My background in healthcare spans over several patient-centered and administrative roles. I began my career as a Patient Care Technician at Piedmont Athens Regional, where I developed a strong foundation in fast-paced clinical environments, patient support, and critical thinking. I then transitioned into a Referral Coordinator role within a dermatology practice, managing the full lifecycle of patient referrals and acting as a central communication point between patients, providers, and external offices.
+
+I later worked as an Infusion Specialist in an insulin infusion center, supporting diabetic patients in maintaining treatment stability while coordinating closely with their broader care teams. Additionally, I played a key role in the launching of a second infusion clinic through this company and served as the office manager of this location, where I oversaw daily operations, workflow management, and administrative processes to ensure smooth and effective practice performance.
+
+While my formal education began in pursuit of a nursing degree, my career path shifted, and I have since built my expertise through extensive hands-on experience, complemented by specialized certifications across multiple areas of healthcare. But I believe my passion for physical health and wellbeing is what ultimately led me to the FINISH doorstep.</p></div>
+    </details>
+  </div></div>
+
+  <div class="task" data-k="t5"><input type="checkbox" id="t5" checked aria-labelledby="t5l"><div class="tb">
+    <div class="th"><span class="tt" id="t5l">Hide Ali Johnson’s page for now</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 14 and 16 Oct</span></div>
+    <p class="quote">“Ali Johnson is now Haley Chasteen.”</p>
+    <ul>
+      <li>Ali Johnson, LPN is not shown on staging today. Do not add her card from the live site.</li>
+      <li>If her page is created in the Team collection, keep it hidden: set the item to <b>Draft</b> so it is not published. Do not delete it for now.</li>
+    </ul>
+  </div></div>
+</section>
+
+<!-- ===================== SEO ===================== -->
+<section class="block" id="seo">
+  <div class="sec-h"><h2>Individual team pages for SEO</h2><p>Decided: we keep a separate page for each team member, as on the current site.</p></div>
+
+  <div class="task" data-k="t6"><input type="checkbox" id="t6" aria-labelledby="t6l" checked><div class="tb">
+    <div class="th"><span class="tt" id="t6l">Let the FINISH team know: we are keeping individual team pages</span><span class="chip done">Done</span><span class="src">FINISH team, 16 Oct</span></div>
+    <p class="quote">“Each person currently opens to their own dedicated page, but a pop-up modal would be fine. However, Mike Hayden, Scott Sinclair, and really our whole team are searched frequently. I was told that if they do not have their own individual pages, we cannot optimize for SEO. What are your thoughts on this?”</p>
+    <p class="now"><b>Done on staging:</b> all 11 team members now have their own page at their current address. The FINISH team has been told.</p>
+    <p><b>Decision:</b> keep the pop-up on the About page for quick reading, and also give each person their own page at the same address they have today. That keeps their search rankings and lets each page be optimised for the person’s name.</p>
+  </div></div>
+
+  <div class="task" data-k="t7"><input type="checkbox" id="t7" checked aria-labelledby="t7l"><div class="tb">
+    <div class="th"><span class="tt" id="t7l">Build the individual team pages</span><span class="chip dev">Revinok</span></div>
+    <ol>
+      <li>Create a Webflow CMS collection <b>Team</b> with fields for name, credentials, title, photo, short bio, full bio and pillar (DirectOrtho+, Healthspan, Longevity).</li>
+      <li>Set the collection URL so pages live at <code>/our-team/[slug]</code>, using the same slugs as the live site (table below).</li>
+      <li>For each page: SEO title and meta description with the person’s name, credentials and “Athens, GA”, plus Person schema (name, job title, works for FINISH Performance Health).</li>
+      <li>About and Home cards keep the pop-up, with a “Read full profile” link to the person’s page.</li>
+      <li>Remove the 301 redirects from the team addresses to /about, so the old addresses load the new pages directly. Keep <code>/our-team/</code> pointing to the About team section.</li>
+    </ol>
+    <div class="tw"><table>
+      <thead><tr><th>Person</th><th>Address</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td><b>Keep:</b> Kelly Ward, PA</td><td><code>/our-team/kelly-ward-pa/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Matthew Farmer, MD</td><td><code>/our-team/matthew-farmer-md/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Christopher Gaunder, MD</td><td><code>/our-team/christopher-gaunder-md/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Cynthia Mercer, MD</td><td><code>/our-team/cynthia-mercer-md/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Caroline Ward, CPT</td><td><code>/our-team/caroline-ward-cpt/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Scott Sinclair, MSCC</td><td><code>/our-team/scott-sinclair-mscc/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Mike Hayden, MS, PT</td><td><code>/our-team/mike-hayden-ms-pt/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Keep:</b> Callie Michaelis, RD (formerly Callie Davis)</td><td><code>/our-team/callie-davis-rd/</code></td><td>Now redirects to /our-team/callie-michaelis-rd</td></tr>
+        <tr><td><b>Keep:</b> Ali Chapas, PT</td><td><code>/our-team/ali-chapas-pt/</code></td><td>Same address. Content from live page</td></tr>
+        <tr><td><b>Hide:</b> Ali Johnson, LPN (now Haley)</td><td><code>/our-team/ali-johnson-lpn/</code></td><td>Set to Draft for now. Do not delete</td></tr>
+        <tr><td><b>Add:</b> Neale Maddox, RT(R)</td><td>New: <code>/our-team/neale-maddox-rt/</code></td><td>Content below, photo in Downloads</td></tr>
+        <tr><td><b>Add:</b> Haley Chasteen</td><td>New: <code>/our-team/haley-chasteen/</code></td><td>Content below, photo after retouch</td></tr>
+        <tr><td><b>Add:</b> Deana Contaoi, ATC</td><td>New: <code>/our-team/deana-contaoi-atc/</code></td><td>Waiting on FINISH for bio and photo</td></tr>
+        <tr><td><b>Later:</b> Clinical Manager / Lead ATC</td><td>Page once FINISH names the person</td><td>Placeholder card only for now</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+
+  <div class="task" data-k="t9"><input type="checkbox" id="t9" checked aria-labelledby="t9l"><div class="tb">
+    <div class="th"><span class="tt" id="t9l">Content for the new team pages</span><span class="chip dev">Revinok</span></div>
+    <p>Same layout and tone as the current team pages (for example <a href="https://finishperformancehealth.com/our-team/mike-hayden-ms-pt/" target="_blank" rel="noopener">Mike Hayden</a>): name and credentials as the heading, photo, a third-person bio, then the same “Ready to Own Your Health?” section. SEO titles and descriptions follow the live pattern. Written only from what FINISH sent.</p>
+
+    <div class="copy">
+      <div class="lbl"><span>Neale Maddox · page</span><button class="cp" type="button" data-copy="pg_neale">Copy</button></div>
+      <p id="pg_neale">SEO title: Neale Maddox RT(R) Athens GA | Finish Performance Health
+Meta description: Meet Neale Maddox, RT(R), Imaging/Operations Director at Finish Performance Health in Athens, GA, with 30 years of experience in diagnostic imaging and orthopedic care.
+
+Heading: Neale Maddox, RT(R)
+Role: Imaging/Operations Director
+
+Neale Maddox is a Registered Radiologic Technologist with 30 years of experience in diagnostic imaging and orthopedic care. She has worked with patients of all ages, from athletes recovering from sports-related injuries to people managing the orthopedic challenges that can come with aging.
+
+Neale served the Athens community as Director of Radiology at Athens Orthopedic Clinic for 30 years before joining FINISH Performance Health in October. A member of the ASRT and ARRT for 30 years, she is passionate about quality care and helping patients navigate their healthcare journeys. She considers it a privilege to bring her experience, compassion and commitment to patients throughout Athens and the surrounding communities.</p>
+    </div>
+
+    <div class="copy">
+      <div class="lbl"><span>Haley Chasteen · page</span><button class="cp" type="button" data-copy="pg_haley">Copy</button></div>
+      <p id="pg_haley">SEO title: Haley Chasteen Athens GA | Finish Performance Health
+Meta description: Meet Haley Chasteen, Client Navigator at Finish Performance Health in Athens, GA, with experience in patient care, referral coordination and practice operations.
+
+Heading: Haley Chasteen
+Role: Client Navigator
+
+Haley Chasteen’s background in healthcare spans patient care and practice administration. She began her career as a Patient Care Technician at Piedmont Athens Regional, where she built a strong foundation in fast-paced clinical settings, patient support and critical thinking. She then became a Referral Coordinator in a dermatology practice, managing patient referrals from start to finish and serving as the central point of contact between patients, providers and outside offices.
+
+Haley later worked as an Infusion Specialist at an insulin infusion center, helping patients with diabetes stay on track with treatment while coordinating closely with their wider care teams. She played a key role in launching the company’s second infusion clinic and served as its office manager, overseeing daily operations, workflow and administration. Haley first studied toward a nursing degree, and has since built her expertise through extensive hands-on experience and specialized certifications across several areas of healthcare. Her passion for physical health and wellbeing is what brought her to FINISH.</p>
+    </div>
+
+    <p class="now"><b>Deana Contaoi, ATC:</b> page content will follow once FINISH sends her bio and photo. Until then, set her item to Draft.</p>
+  </div></div>
+  <div class="task" data-k="t10"><input type="checkbox" id="t10" aria-labelledby="t10l"><div class="tb">
+    <div class="th"><span class="tt" id="t10l">Sitemap and the old Ali Johnson link</span><span class="chip dev">Revinok</span><span class="src">At launch</span></div>
+    <ul>
+      <li>Add the 11 team pages to the sitemap (may be done on staging now if time allows).</li>
+      <li>Point the old <code>/our-team/ali-johnson-lpn/</code> link to the About team section when the site goes live.</li>
+    </ul>
+  </div></div>
+</section>
+
+<!-- ===================== FULL TEAM ===================== -->
+<section class="block" id="team">
+  <div class="sec-h"><h2>The full team on the site</h2><p>From the FINISH team’s 14 October email and launch plan slide 6: the three co-founders at the top, the rest of the team directly underneath. The FINISH team’s 16 October email confirms the whole current team stays (“really our whole team”). Tick each person once their card (and page) is live on staging.</p></div>
+  <div class="people" id="people">
+    <div class="person"><img src="img/neale-maddox-web.jpg" alt="Neale Maddox" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_neale" checked><span>Neale Maddox, RT(R)</span></label><span class="role">Imaging/Operations Director · photo and page live</span></div></div>
+    <div class="person"><img src="img/haley-chasteen-web-unretouched.jpg" alt="Haley Chasteen" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_haley" checked><span>Haley Chasteen</span></label><span class="role">Client Navigator · photo retouched, page live</span></div></div>
+    <div class="person"><div class="ph" aria-hidden="true">DC</div><div class="pi"><label><input type="checkbox" id="p_deana"><span>Deana Contaoi, ATC</span></label><span class="role">Athletic Trainer · waiting on FINISH for bio and photo</span></div></div>
+    <div class="person"><div class="ph" aria-hidden="true">?</div><div class="pi"><label><input type="checkbox" id="p_cm"><span>Clinical Manager / Lead ATC</span></label><span class="role">Hidden for now (19 Oct)</span></div></div>
+    <div class="person"><img src="img/mike-hayden.webp" alt="Mike Hayden" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_mike" checked><span>Mike Hayden, MS, PT</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/mike-hayden-ms-pt/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/scott-sinclair.webp" alt="Scott Sinclair" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_scott" checked><span>Scott Sinclair, MSCC</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/scott-sinclair-mscc/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/caroline-ward.webp" alt="Caroline Ward" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_caroline" checked><span>Caroline Ward, CPT</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/caroline-ward-cpt/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/cynthia-mercer.webp" alt="Cynthia Mercer" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_cynthia" checked><span>Cynthia Mercer, MD</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/cynthia-mercer-md/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/callie-davis.webp" alt="Callie Michaelis" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_callie" checked><span>Callie Michaelis, RD</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/callie-davis-rd/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/ali-chapas.webp" alt="Ali Chapas" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_alic" checked><span>Ali Chapas, PT</span></label><span class="role">Page live with bio and photo from the current site</span><span class="acts"><a href="https://finishperformancehealth.com/our-team/ali-chapas-pt/" target="_blank" rel="noopener">Live page</a></span></div></div>
+    <div class="person"><img src="img/leah-spivak.webp" alt="Leah Spivak" loading="lazy"><div class="pi"><label><input type="checkbox" id="p_leah" checked><span>Leah Spivak</span></label><span class="role">Social Media Marketing · card live on About, no bio</span></div></div>
+  </div>
+  <p class="note">The co-founders (Kelly Ward, Matthew Farmer, Christopher Gaunder) are already at the top of the About page.</p>
+</section>
+
+<!-- ===================== MOBILE ===================== -->
+<section class="block" id="mobile">
+  <div class="sec-h"><h2>Mobile landing page</h2><p>From the FINISH team’s 15 October email.</p></div>
+  <div class="task" data-k="t8"><input type="checkbox" id="t8" checked aria-labelledby="t8l"><div class="tb">
+    <div class="th"><span class="tt" id="t8l">Restore the look of the Home page on mobile</span><span class="chip dev">Revinok</span><span class="src">FINISH team, 15 Oct</span></div>
+    <p class="quote">“Would you look at the mobile aspect of landing page as it has changed and is not quite as nice as it was?”</p>
+    <ul>
+      <li>Compare the Home page on a phone with the earlier version (Webflow page history) and bring back what changed.</li>
+      <li>Share a phone screenshot for the FINISH team to confirm.</li>
+    </ul>
+  </div></div>
+</section>
+
+<!-- ===================== FINISH ===================== -->
+<section class="block" id="finish">
+  <div class="sec-h"><h2>Still needed from FINISH</h2><p>Asked in the emails and not answered yet.</p></div>
+  <div class="task" data-k="f1"><input type="checkbox" id="f1" aria-labelledby="f1l"><div class="tb"><div class="th"><span class="tt" id="f1l">Deana Contaoi, ATC (Athletic Trainer): short bio and photo</span><span class="chip fin">FINISH</span><span class="src">Asked by Revinok, 15 Oct</span></div></div></div>
+  <div class="task" data-k="f2"><input type="checkbox" id="f2" aria-labelledby="f2l"><div class="tb"><div class="th"><span class="tt" id="f2l">Which team members appear on DirectOrtho+ and which on Healthspan</span><span class="chip fin">FINISH</span><span class="src">Asked by Revinok, 15 Oct</span></div></div></div>
+  <div class="task" data-k="f3"><input type="checkbox" id="f3" aria-labelledby="f3l"><div class="tb"><div class="th"><span class="tt" id="f3l">Clinical Manager / Lead ATC: name, photo and bio when official</span><span class="chip fin">FINISH</span><span class="src">Expected in about two weeks</span></div></div></div>
+  <div class="task" data-k="f5"><input type="checkbox" id="f5" aria-labelledby="f5l" checked><div class="tb">
+    <div class="th"><span class="tt" id="f5l">Healthspan “cost if bought individually” figures</span><span class="chip done">Supplied</span><span class="src">FINISH team source</span></div>
+    <p class="now">Already in the FINISH team’s Healthspan v6.3 file. Now tracked in 19 October, item 11.</p>
+  </div></div>
+</section>
+
+<!-- ===================== DONE ===================== -->
+<section class="block" id="done">
+  <div class="sec-h"><h2>Already done on staging</h2><p>From the FINISH team’s 14 and 15 October emails. Checked on the 15 October publish.</p></div>
+  <ul class="done-list">
+    <li><span class="chip done">Done</span><span>DirectOrtho+: same-day access, care under one roof, the training room open to the public, clear prices, and more detail on PRP and orthobiologics.</span></li>
+    <li><span class="chip done">Done</span><span>Healthspan: service prices shown, annual membership fees removed.</span></li>
+    <li><span class="chip done">Done</span><span>Youth &amp; Student injury visits and the concussion program restored at $199. Only Virtual Concussion removed.</span></li>
+    <li><span class="chip done">Done</span><span>Longevity: more detail and “coming soon / scheduling clients soon / your next 25 years are already being written” messaging.</span></li>
+    <li><span class="chip done">Done</span><span>Neale Maddox’s bio added to the About page.</span></li>
+    <li><span class="chip done">Done</span><span>Warm, humble team introduction that says FINISH is purpose driven.</span></li>
+    <li><span class="chip done">Done</span><span>Three co-founders shown at the top of the team section.</span></li>
+  </ul>
+</section>
+
+<!-- ===================== DOWNLOADS ===================== -->
+<section class="block" id="downloads">
+  <div class="sec-h"><h2>Downloads</h2><p>Press “View full size” (or tap a photo). In the viewer, right-click the photo and choose “Save image as”, or long-press it on a phone.</p></div>
+  <div class="dl">
+    <div class="dlc"><img src="img/neale-maddox-web.jpg" alt="Neale Maddox, web crop" loading="lazy"><div class="pi"><b>Neale Maddox · web-ready</b><span class="fname">neale-maddox-web.jpg · 960 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/neale-maddox-web.jpg">View full size</button> <button class="btn ghost" type="button" data-full="orig/neale-maddox-original.png">Original</button></span></div></div>
+    <div class="dlc"><img src="img/haley-chasteen-web-unretouched.jpg" alt="Haley Chasteen, web crop before retouch" loading="lazy"><div class="pi"><b>Haley Chasteen · needs retouch</b><span class="fname">haley-chasteen-web-unretouched.jpg · 960 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/haley-chasteen-web-unretouched.jpg">View full size</button> <button class="btn ghost" type="button" data-full="orig/haley-chasteen-original.jpeg">Original</button></span></div></div>
+    <div class="dlc"><img src="img/mike-hayden.webp" alt="Mike Hayden" loading="lazy"><div class="pi"><b>Mike Hayden</b><span class="fname">mike-hayden.webp · 840 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/mike-hayden.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/scott-sinclair.webp" alt="Scott Sinclair" loading="lazy"><div class="pi"><b>Scott Sinclair</b><span class="fname">scott-sinclair.webp · 840 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/scott-sinclair.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/caroline-ward.webp" alt="Caroline Ward" loading="lazy"><div class="pi"><b>Caroline Ward</b><span class="fname">caroline-ward.webp · 840 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/caroline-ward.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/cynthia-mercer.webp" alt="Cynthia Mercer" loading="lazy"><div class="pi"><b>Cynthia Mercer</b><span class="fname">cynthia-mercer.webp · 840 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/cynthia-mercer.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/callie-davis.webp" alt="Callie Michaelis" loading="lazy"><div class="pi"><b>Callie Michaelis (formerly Davis)</b><span class="fname">callie-davis.webp · 420 × 600</span><span class="acts"><button class="btn ghost" type="button" data-full="img/callie-davis.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/ali-chapas.webp" alt="Ali Chapas" loading="lazy"><div class="pi"><b>Ali Chapas</b><span class="fname">ali-chapas.webp · 420 × 600</span><span class="acts"><button class="btn ghost" type="button" data-full="img/ali-chapas.webp">View full size</button></span></div></div>
+    <div class="dlc"><img src="img/leah-spivak.webp" alt="Leah Spivak" loading="lazy"><div class="pi"><b>Leah Spivak</b><span class="fname">leah-spivak.webp · 840 × 1200</span><span class="acts"><button class="btn ghost" type="button" data-full="img/leah-spivak.webp">View full size</button></span></div></div>
+  </div>
+  <p class="note">Haley’s bio came as an Apple Pages file. Its full text is in the Haley task above, ready to copy.</p>
+</section>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Full size photo"><div class="lb-bar"><span>Right-click or long-press the photo, then “Save image as”.</span><button type="button" id="lbx">Close</button></div><img id="lbi" alt=""></div>
+
+</div>
+<div id="tab-sources" role="tabpanel" aria-labelledby="tabbtn-sources" hidden>
+<section class="block"><div class="sec-h"><h2>FINISH team source files</h2><p>The five content files from the FINISH team, kept here in one place. Later email corrections from the FINISH team take priority over these files. Press “Show preview” to read a file inside this page.</p></div>
+  <article class="srccard">
+    <div class="srchead"><div><h3>MasterBrand Web v3.1</h3><span class="fname">FINISH_MasterBrand_Web_v3.1.html</span></div><span class="chip dev">Home / main landing page</span></div>
+    <p><b>Use for:</b> Home content, the three pillars, the founders’ short descriptions, the “Treat. Measure. Build.” service list.</p>
+    <p><b>Do not copy:</b> Annual membership prices ($9,000 / $12,500 / $18,000) and “not accepting patients” wording for Longevity. Christopher’s title here (“Director, FINISH Longevity”) is replaced by “Regenerative/Longevity Director”.</p>
+    <div class="acts"><button class="btn" type="button" data-src="sources/FINISH_MasterBrand_Web_v3.1.html">Show preview</button></div>
+    <div class="srcframe" hidden></div>
+  </article>
+  <article class="srccard">
+    <div class="srchead"><div><h3>DirectOrtho v10.6</h3><span class="fname">DirectOrtho-landing_v10.6.html</span></div><span class="chip dev">DirectOrtho+ page</span></div>
+    <p><b>Use for:</b> Same-day access, one roof, Athletic Training Room open to the public, self-pay pricing, PRP and orthobiologics, Youth &amp; Student and concussion visits at $199.</p>
+    <p><b>Do not copy:</b> Virtual Concussion (removed). Booking buttons use placeholder links; there is no direct booking link in this file.</p>
+    <div class="acts"><button class="btn" type="button" data-src="sources/DirectOrtho-landing_v10.6.html">Show preview</button></div>
+    <div class="srcframe" hidden></div>
+  </article>
+  <article class="srccard">
+    <div class="srchead"><div><h3>Healthspan v6.3</h3><span class="fname">FINISH_Healthspan_Landing_v6.3.html</span></div><span class="chip dev">FINISH Healthspan page</span></div>
+    <p><b>Use for:</b> Service menu and prices, Baseline Day and Executive Physical, membership benefits, and the line-by-line value tables (Bronze $13,720, Silver $19,485, Gold $29,950).</p>
+    <p><b>Do not copy:</b> Annual dues, “You save” lines and payment plans. Value totals are source figures, not approved for publication. CT valuation ($300 vs $150) is still open.</p>
+    <div class="acts"><button class="btn" type="button" data-src="sources/FINISH_Healthspan_Landing_v6.3.html">Show preview</button></div>
+    <div class="srcframe" hidden></div>
+  </article>
+  <article class="srccard">
+    <div class="srchead"><div><h3>About v8.5</h3><span class="fname">FINISH_MasterBrand_About_v8.5.html</span></div><span class="chip dev">About page and team</span></div>
+    <p><b>Use for:</b> Full bios for Kelly Ward, Matthew Farmer and Christopher Gaunder; the Grand Canyon story; how FINISH is built; address and hours.</p>
+    <p><b>Do not copy:</b> “Longevity: not open, not accepting patients”. Generic team roles (replaced by the named team). Christopher’s title is replaced by “Regenerative/Longevity Director”.</p>
+    <div class="acts"><button class="btn" type="button" data-src="sources/FINISH_MasterBrand_About_v8.5.html">Show preview</button></div>
+    <div class="srcframe" hidden></div>
+  </article>
+  <article class="srccard">
+    <div class="srchead"><div><h3>Longevity v3.1</h3><span class="fname">FINISH_Longevity_Landing_v3.1.html</span></div><span class="chip dev">FINISH Longevity page</span></div>
+    <p><b>Use for:</b> The long-arc model, areas of attention, the four opening standards, interest list wording.</p>
+    <p><b>Do not copy:</b> “Not currently accepting patients” wording; the FINISH team’s later wording is “Coming soon” and “Your next 25 years are already being written…”, with full launch at the start of 2027.</p>
+    <div class="acts"><button class="btn" type="button" data-src="sources/FINISH_Longevity_Landing_v3.1.html">Show preview</button></div>
+    <div class="srcframe" hidden></div>
+  </article>
+</section>
+</div>
+
+<footer class="f">
+  <p>Sources: the FINISH team’s email and photo feedback of 19 October 2026 (also in “FINISH Updates 19th Oct”), the FINISH team’s emails of 14, 15 and 16 October 2026 (thread “Can we connect?”), the FINISH team’s WhatsApp message of 16 October, the FINISH website launch action plan, and the staging site as published on 15 October.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='finish-tracker-v3';
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ state={}; }
+  var boxes=[].slice.call(document.querySelectorAll('input[type=checkbox]'));
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+  function paint(){
+    var n=0;
+    boxes.forEach(function(b){
+      var t=b.closest('.task'); if(t) t.classList.toggle('is-done',b.checked);
+      if(b.checked) n++;
+    });
+    document.getElementById('pc').textContent=n;
+    document.getElementById('pt').textContent=boxes.length;
+    document.getElementById('pb').style.width=(boxes.length?Math.round(n/boxes.length*100):0)+'%';
+  }
+  boxes.forEach(function(b){
+    if(state[b.id]) b.checked=true;
+    b.addEventListener('change',function(){ state[b.id]=b.checked; save(); paint(); });
+  });
+  paint();
+  var lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
+  function openLb(src,alt){ lbi.src=src; lbi.alt=alt||''; lb.hidden=false; document.getElementById('lbx').focus(); }
+  function closeLb(){ lb.hidden=true; lbi.removeAttribute('src'); }
+  document.querySelectorAll('[data-full]').forEach(function(b){ b.addEventListener('click',function(){ var c=b.closest('.dlc'); openLb(b.getAttribute('data-full'), c&&c.querySelector('img')?c.querySelector('img').alt:''); }); });
+  document.querySelectorAll('.dlc img').forEach(function(im){ im.addEventListener('click',function(){ var b=im.closest('.dlc').querySelector('[data-full]'); openLb(b?b.getAttribute('data-full'):im.getAttribute('src'),im.alt); }); });
+  document.getElementById('lbx').addEventListener('click',closeLb);
+  lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) closeLb(); });
+  document.querySelectorAll('button.cp').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-copy')); var txt=el.innerText;
+      function done(){ btn.textContent='Copied'; setTimeout(function(){btn.textContent='Copy';},1600); }
+      function fallback(){ var r=document.createRange(); r.selectNodeContents(el); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent='Selected'; }
+      try{ navigator.clipboard.writeText(txt).then(done,fallback); }catch(e){ fallback(); }
+    });
+  });
+  (function(){
+    var btns=[].slice.call(document.querySelectorAll('.tabbar button'));
+    function show(t){btns.forEach(function(b){var on=b.getAttribute('data-tab')===t;b.setAttribute('aria-selected',on?'true':'false');document.getElementById('tab-'+b.getAttribute('data-tab')).hidden=!on;});try{localStorage.setItem('finish-tab',t);}catch(e){}}
+    btns.forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-tab'));});});
+    var start='tracker';try{start=localStorage.getItem('finish-tab')||'tracker';}catch(e){}
+    if(location.hash==='#sources')start='sources';
+    show(start==='sources'?'sources':'tracker');
+    document.querySelectorAll('button[data-src]').forEach(function(b){b.addEventListener('click',function(){
+      var box=b.closest('.srccard').querySelector('.srcframe');
+      if(box.hidden){if(!box.firstChild){var f=document.createElement('iframe');f.src=b.getAttribute('data-src');f.title=b.closest('.srccard').querySelector('h3').textContent;f.loading='lazy';f.setAttribute('sandbox','allow-same-origin');box.appendChild(f);}box.hidden=false;b.textContent='Hide preview';}
+      else{box.hidden=true;b.textContent='Show preview';}
+    });});
+  })();
+})();
+</script>
+
+</body></html>
